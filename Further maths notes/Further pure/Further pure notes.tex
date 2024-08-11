@@ -1,0 +1,33 @@
+\documentclass[11pt, A4paper]{article}
+\usepackage[a4paper, total={7.2in, 10.5in}]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\DeclareMathOperator\cis{cis}
+\usepackage{pgfplots}
+\graphicspath{ {./images/} }
+\usepackage{bookmark}
+\setcounter{tocdepth}{2}
+
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = black, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+
+\newcommand{\tikzAngleOfLine}{\tikz@AngleOfLine}
+\def\tikz@AngleOfLine(#1)(#2)#3{%
+	\pgfmathanglebetweenpoints{%
+		\pgfpointanchor{#1}{center}}{%
+		\pgfpointanchor{#2}{center}}
+	\pgfmathsetmacro{#3}{\pgfmathresult}%
+}
+
+\begin{document}
+	\section{Sequence}
+	\subsection{Tips}
+
+\end{document}

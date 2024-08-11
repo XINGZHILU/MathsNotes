@@ -1,0 +1,329 @@
+\documentclass[A4paper]{article}
+\usepackage[a4paper, total={7.2in, 10.5in}]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+%\setcounter{tocdepth}{2}
+\DeclareMathOperator\cosec{cosec}
+\newcommand{\mycomment}[1]{}
+\title{A Level Pure Mathematics Notes}
+\author{Xingzhi Lu}
+\date{2024}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\pagebreak
+	\section{Proof}
+	\subsection{Methods}
+	\begin{itemize}
+		\item Proof by deduction
+		\item Proof by exhaustion
+		\item Disproof by counter example
+		\item Proof by contradiction
+	\end{itemize}
+	\subsection{Proof by contradiction}
+	\subsubsection{Steps}
+	\begin{enumerate}
+		\item Assume that the first statement is false
+		\item Use logical steps / contradiction from knowledge to show that the assumption is false
+		\item Conclude that the assumption is false so the original statement must be true
+	\end{enumerate}
+	\subsubsection{Irrationality of $\sqrt{2}$}
+	\begin{description}
+		\item [ Assumption:] $\sqrt{2}$ is a rational number
+		\item Then $\sqrt{2} = \dfrac{a}{b}$ for some integers $a$ and $b$
+		\item Also assume that $a$ and $b$ has no common factors so the fraction is in the simplest form
+		\item So $2=\dfrac{a^2}{b^2}$, $a^2=2b^2$
+		\item So $a^2$ must be even, so a is also even
+		\item If $a$ is even, then it can be expressed in the form $a=2n$, where $n$ is an integer
+		\item Substitute $a=2n$: $(2n)^2=2b^2$
+		\item So $4n^2 = 2b^2$
+		\item So $b^2=2n^2$, hence $b^2$ must be even and b is also even
+		\item If $a$ and $b$ are both even, they will have a common factor or 2
+		\item This contradicts that $a$ and $b$ has no common factors, so $\sqrt{2}$ is an irrational number
+	\end{description}
+
+
+	\subsubsection{Infinity of primes}
+	\begin{description}
+		\item [ Assumption:] there is a finite number of prime numbers
+		\item List all the prime numbers that exist: $p_1, p_2, p_3, \dots, p_n$
+		\item Consider the number $N = p_1 \times p_2 \times p_3 \times \dots \times p_n + 1$
+		\item When $N$ is divided by any of $p_1, p_2, p_3, \dots, p_n$ a remainder of $1$ is produced so none of them is a factor of $N$
+		\item Therefore $N$ must be prime or have a prime factor not in the list of all the prime numbers that exist
+		\item This contradicts the assumption that there is a finite number of prime numbers
+		\item Therefore there must be an infinite number of prime numbers
+	\end{description}
+
+
+	\pagebreak
+
+	\section{Algebra and functions}
+	\subsection{Expressing solutions with set notations}
+	Examples:
+	\begin{itemize}
+		\item $x>a$ and $x<b$ can be expressed as $\left\lbrace x : x>a \right\rbrace \cap \left\lbrace x:x<b\right\rbrace$
+		\item $x<c$ or $x>d$ can be expressed as $\left\lbrace x : x>c \right\rbrace \cup \left\lbrace x:x<d\right\rbrace$
+	\end{itemize}
+
+	\subsection{Sketching graphs}
+	\subsubsection{Quadratic / cubic / quartic}
+	Find:
+	\begin{itemize}
+		\item Roots (may only be one or none)
+		\item y-intercept
+		\item Turning point
+		\item Shape
+	\end{itemize}
+	\mycomment{
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin = -8, xmax = 8,
+				ymin = -40, ymax = 40, axis lines=center, axis line style={thick},xlabel=$x$,ylabel=$y$]
+				\addplot[
+				domain = -5:5,
+				samples = 200,
+				smooth,
+				thick,
+				blue,
+				] {10*x^3};
+			\end{axis}
+		\end{tikzpicture}
+	}
+	\subsubsection{Reciprocal graphs}
+	Find:
+	\begin{itemize}
+		\item Horizontal asymptotes (by long division)
+		\item Vertical asymptotes (where denominator = $0$)
+	\end{itemize}
+
+
+	\pagebreak
+
+	\section{Coordinate geometry in $(x,y)$ plane}
+
+	\subsection{Parametric equations}
+	\subsubsection{Convert to Cartesian form}
+	\begin{itemize}
+		\item Express $t$ in terms of $x$, then substitute $t=f(x)$ into $y=g(t)$
+		\item Find the range of $x$ by using the original parametric equation
+		\item Find the range of $y$ using original equation / considering the domain of $x$
+	\end{itemize}
+	\subsubsection{Sketching curve}
+	Sketch at regular intervals of $t$
+
+
+	\pagebreak
+
+	\section{Sequences and series}
+	\subsection{Binomial expansion}
+	\subsubsection{Expanding $(1+x)^n$}
+	When $|x|<1$:\\
+	$(1+x)^n\approx 1 + nx + \dfrac{n(n-1)}{2!}x^2+\dfrac{n(n-1)(n-2)}{3!}x^3+\dots$
+	\subsubsection{Expanding $(a+bx)^n$}
+	$(a+bx)^n = (a(1+\dfrac{b}{a}x))^n = a^n(1+\dfrac{b}{a}x)^n$\\
+	Valid for $|\dfrac{b}{a}x|<1$ or $|x| < \dfrac{a}{b}$
+	\subsection{Divergent / convergent series}
+	$\sum\limits_{i=1}^{n} u_i = u_1+u_2+u_3+\dots+u_n$\\
+	If $\lim\limits_{n \to \infty}S_n$ exists, $\sum\limits_{i=1}^{n} u_i$ converges\\
+	If $\lim\limits_{n \to \infty}S_n$ does not exist, $\sum\limits_{i=1}^{n} u_i$ diverges
+	\subsection{Geometric series}
+	\begin{description}
+		\item [Sum of first n terms:]$S_n = \dfrac{a(1-r^n)}{1-r}$
+		\item [Sum to infinity:] When $|r|<1$ (convergent series): $S_\infty = \dfrac{a}{1-r}$
+	\end{description}
+
+	\subsection{Recurrence relations}
+	\begin{description}
+		\item[Increasing sequence:] $u_{n+1}>u_n$ for all $n\in \mathbf{N}$
+		\item[Decreasing sequence:] $u_{n+1}<u_n$ for all $n\in \mathbf{N}$
+		\item[Periodic sequence:] If there is an integer $k$ such that $u_{n+k}=u_n$ for all $n\in \mathbf{N}$, $k$ = the order of the sequence
+	\end{description}
+
+	\pagebreak
+
+	\section{Trigonometry}
+	\subsection{Radian calculations}
+	\begin{description}
+		\item[Arc length:] $s=r\theta$
+		\item[Area of sector:] $A=\dfrac{1}{2}r^2\theta$
+	\end{description}
+
+	\subsection{Trigonometry formulae}
+	\subsubsection{Addition / subtraction}
+	\begin{itemize}
+		\item $\sin (A \pm B) = \sin A \cos B \pm \cos A \sin B$
+		\item $\cos (A \pm B) = \cos A \cos B \mp \sin A \sin B$
+		\item $\tan (A \pm B) = \dfrac{\tan A \pm \tan B}{1 \mp \tan A \tan B}$
+		\item $\sin A + \sin B = 2\sin \dfrac{A+B}{2} \cos\dfrac{A-B}{2}$
+		\item $\sin A - \sin B = 2\cos \dfrac{A+B}{2} \sin\dfrac{A-B}{2}$
+		\item $\cos A + \cos B = 2\cos \dfrac{A+B}{2} \cos\dfrac{A-B}{2}$
+		\item $\cos A - \cos B = -2\sin \dfrac{A+B}{2} \sin\dfrac{A-B}{2}$
+	\end{itemize}
+	\subsubsection{Double angle}
+	\begin{itemize}
+		\item $\sin 2A = 2\sin A \cos A$
+		\item $\cos 2A = \cos^2 A - \sin^2 A$
+		\item $\tan 2A = \dfrac{2\tan A}{1-\tan^2 A}$
+	\end{itemize}
+	\subsubsection{Power descending}
+	(Derive from double angle)
+	\begin{itemize}
+		\item $\sin A \cos A = \dfrac{\sin2A}{2}$
+		\item $\sin^2 A = \dfrac{1-\cos2A}{2}$
+		\item $\cos^2 A = \dfrac{1+\cos2A}{2}$
+	\end{itemize}
+	\subsubsection{Half angle}
+	\begin{itemize}
+		\item $\sin \dfrac{A}{2} = \pm \sqrt{\dfrac{1-\cos A}{2}}$
+		\item $\cos \dfrac{A}{2} = \pm \sqrt{\dfrac{1+\cos A}{2}}$
+		\item $\tan \dfrac{A}{2} = \pm \sqrt{\dfrac{1-\cos A}{1+\cos A}} = \dfrac{1-\cos A}{\sin A} = \dfrac{\sin A}{1+\cos A}$
+	\end{itemize}
+	\subsubsection{Small angle estimation}
+	When $\theta$ is small:
+	\begin{itemize}
+		\item $\sin \theta \approx \theta$
+		\item $\cos \theta \approx 1- \dfrac{\theta^2}{2}$
+		\item $\tan \theta \approx \theta$
+	\end{itemize}
+	\subsection{Identities}
+	\begin{itemize}
+		\item $\tan \theta = \dfrac{\sin \theta}{\cos \theta}$
+		\item $\sin^2 \theta + \cos^2 \theta = 1$
+		\item $\tan^2 \theta + 1 = \sec^2 \theta$
+		\item $\cot^2 \theta + 1 = \cosec^2 \theta$
+	\end{itemize}
+
+	\subsection{Graphs}
+	\subsubsection{secant, cosecant and cotangent}
+	\includegraphics[scale=0.9]{csc-sec-cot-graphs}
+
+	\subsubsection{arcsin, arccos, arctan}
+	\includegraphics[scale=0.7]{arcsincostan}
+
+
+	\section{Exponentials and logarithms}
+	\subsection{Sketching graphs}
+	Find the y-intercept of the graph
+
+	\subsection{$e^x$ function}
+	\begin{description}
+		\item $(e^x)'$ = $e^x$
+		\item $(e^{kx})'$ = $ke^{kx}$ (gradient directly proportional to y value)
+	\end{description}
+
+	\subsection{Logarithm}
+	$a^x = n$: $\log_a n = x$ ($a\neq1$ and $a>0$, $x\geq0$)
+	\subsubsection{Laws}
+	\begin{description}
+		\item[The multiplication law:] $\log_a x + \log_a y = \log_a xy$
+		\item[The division law:] $\log_a x - \log_a y = \log_a (\dfrac{x}{y})$
+		\item[The power law:] $\log_a x^k = k\log_a x$
+		\item[Change base formula]: $\log_a b = \dfrac{\log_c b}{\log_c a}$
+	\end{description}
+
+	\subsubsection{Logarithms in non-linear form}
+	\begin{itemize}
+		\item $y=ax^n$ can be written as $\log y = n \log x + \log a$\\
+		$n$ = gradient, $\log a$ = y-intercept
+		\item $y=ab^x$ can be written as $\log y = (\log b)x + \log a$\\
+		$\log b$ = gradient, $\log a$ = y-intercept
+	\end{itemize}
+
+	\pagebreak
+
+	\section{Differentiation}
+
+	$f'(x) = \lim\limits_{n \to 0}\dfrac{f(x+h)-f(x)}{h}$
+
+	\subsection{Formulae}
+	\begin{tabular}{|l|l|}
+		\hline
+		$\mathbf{f(x)}$ & $\mathbf{f'(x)}$ \\
+		\hline
+		$\tan kx$ & $k\sec^2 kx$ \\
+		\hline
+		$\sec kx$ & $k\sec kx \tan kx$ \\
+		\hline
+		$\cot kx$ & $-k\cosec^2 kx$ \\
+		\hline
+		$\cosec kx$ & $-k\cosec kx \cot kx$ \\
+		\hline
+	\end{tabular}
+
+	\subsection{Rules}
+	\begin{description}
+		\item[Chain rule:] $\dfrac{dy}{dx} = \dfrac{dy}{du} \times \dfrac{du}{dx}$
+		\item[Product rule:] $(f(x)g(x))'=f'(x)g(x)+g'(x)f(x)$
+		\item[Quotient rule:] $\dfrac{f(x)}{g(x)} = \dfrac{f'(x)g(x)-g'(x)f(x)}{g^2(x)}$
+	\end{description}
+
+
+	\subsection{Tangent and normal}
+	For curve $y=f(x)$:
+	\begin{description}
+		\item[Tangent at $(a,f(a))$:] $y-f(a)=f'(a)(x-a)$
+		\item[Normal at $(a,f(a))$:] $y-f(a)=-\dfrac{1}{f'(a)}(x-a)$
+	\end{description}
+
+
+
+
+	\pagebreak
+
+	\section{Integration}
+
+	\subsection{Formulae}
+	Formula sheet:
+	\begin{itemize}
+		\item ...
+	\end{itemize}
+	Integrating $\sin^2x$ or $\cos^2x$ (power descending):
+	\begin{itemize}
+		\item $\int \sin ^2 x \: dx=\int \dfrac{1-\cos 2x}{2} \: dx=\dfrac{1}{2}(x-\dfrac{\sin 2x}{2})+c$
+		\item $\int \cos ^2 x \: dx=\int \dfrac{1+\cos 2x}{2} \: dx= \dfrac{1}{2}(x+\dfrac{\sin 2x}{2})+c$
+	\end{itemize}
+	\subsection{Techniques}
+	\subsubsection{U-sub}
+	\begin{itemize}
+		\item $\int f'(ax+b) \: dx = \dfrac{f(ax+b)}{a}+c$
+		\begin{description}
+			\item[Substitution:] $u=ax+b$
+		\end{description}
+		\item $\int \dfrac{f'(x)}{f(x)} \: dx = \ln |f(x)|+c$
+		\begin{description}
+			\item[Substitution:] $u=f(x)$
+		\end{description}
+	\end{itemize}
+	\subsubsection{By part}
+	\begin{itemize}
+		\item $\int u \: dv = uv - \int v \: du$
+		\item LIPET rule: leftmost = $u$
+		\begin{description}
+			\item[L:] logarithmic
+			\item[I:] inverse trigonometry
+			\item[P:] polynomial
+			\item[E:] exponential
+			\item[T:] trigonometry
+		\end{description}
+	\end{itemize}
+	\subsection{Inverse trig integration}
+
+	\pagebreak
+
+	\section{Numerical methods}
+
+
+	\pagebreak
+
+	\section{Vectors}
+
+
+
+
+	\end{document}
