@@ -8,7 +8,7 @@
 \usepackage{pgfplots}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
-%\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{2}
 \DeclareMathOperator\cosec{cosec}
 \newcommand{\mycomment}[1]{}
 \title{A Level Pure Mathematics Notes}
@@ -80,21 +80,7 @@
 		\item Turning point
 		\item Shape
 	\end{itemize}
-	\mycomment{
-		\begin{tikzpicture}
-			\begin{axis}[
-				xmin = -8, xmax = 8,
-				ymin = -40, ymax = 40, axis lines=center, axis line style={thick},xlabel=$x$,ylabel=$y$]
-				\addplot[
-				domain = -5:5,
-				samples = 200,
-				smooth,
-				thick,
-				blue,
-				] {10*x^3};
-			\end{axis}
-		\end{tikzpicture}
-	}
+
 	\subsubsection{Reciprocal graphs}
 	Find:
 	\begin{itemize}
@@ -228,11 +214,20 @@
 	\end{description}
 
 	\subsubsection{Logarithms in non-linear form}
+	\textbf{Exponential}
 	\begin{itemize}
-		\item $y=ax^n$ can be written as $\log y = n \log x + \log a$\\
-		$n$ = gradient, $\log a$ = y-intercept
-		\item $y=ab^x$ can be written as $\log y = (\log b)x + \log a$\\
-		$\log b$ = gradient, $\log a$ = y-intercept
+		\item $y=ab^x\rightarrow\ln y = x\ln b + \ln a$
+		\item x-axis = $x$, y-axis = $\ln y$, gradient = $\ln b$, y-intercept = $\ln a$
+	\end{itemize}
+	\textbf{Power}
+	\begin{itemize}
+		\item $y=ax^b\rightarrow\ln y = b\ln x + \ln a$
+		\item x-axis = $\ln x$, y-axis = $\ln y$, gradient = $b$, y-intercept = $\ln a$
+	\end{itemize}
+	\textbf{Logarithmic}
+	\begin{itemize}
+		\item $y=a\ln x\rightarrow$ kept the same
+		\item x-axis = $\ln x$, y-axis = $y$, gradient = $a$
 	\end{itemize}
 
 	\pagebreak
@@ -277,16 +272,29 @@
 	\pagebreak
 
 	\section{Integration}
-
+	
+	\subsection{Definition}
+	$\int_{a}^{b} f(x) \: dx = \lim\limits_{\delta x\rightarrow0}\sum_{x=a}^{b}f(x)\delta x$
+	
 	\subsection{Formulae}
-	Formula sheet:
-	\begin{itemize}
-		\item ...
-	\end{itemize}
+	Formula sheet:\\\\
+	\begin{tabular}{ll}
+	$\textbf{f(x)}$	& \textbf{$\int f(x) \: dx$ ($+c$)} \\&\\ 
+	$\sec^2kx$	& $\dfrac{1}{k} \tan kx$ \\&\\
+	$\tan kx$	& $\dfrac{1}{k} \ln |\sec kx|$ \\&\\
+	$\cot kx$	& $\dfrac{1}{k} \ln |\sin kx|$ \\&\\
+	$\cosec kx$	& $-\dfrac{1}{k} \ln |\cosec kx + \cot kx|$, $\dfrac{1}{k} \ln |\tan (\dfrac{1}{2}kx)|$ \\&\\
+	$\sec kx$	& $\dfrac{1}{k} \ln |\sec kx + \tan kx|$, $\dfrac{1}{k} \ln |\tan (\dfrac{1}{2}kx+\dfrac{1}{4}\pi)|$ \\
+
+	\end{tabular}\\
 	Integrating $\sin^2x$ or $\cos^2x$ (power descending):
 	\begin{itemize}
 		\item $\int \sin ^2 x \: dx=\int \dfrac{1-\cos 2x}{2} \: dx=\dfrac{1}{2}(x-\dfrac{\sin 2x}{2})+c$
 		\item $\int \cos ^2 x \: dx=\int \dfrac{1+\cos 2x}{2} \: dx= \dfrac{1}{2}(x+\dfrac{\sin 2x}{2})+c$
+	\end{itemize}
+	By part:
+	\begin{itemize}
+		\item $\int \ln x \: dx = x\ln x + x + c$
 	\end{itemize}
 	\subsection{Techniques}
 	\subsubsection{U-sub}
@@ -312,18 +320,48 @@
 			\item[T:] trigonometry
 		\end{description}
 	\end{itemize}
-	\subsection{Inverse trig integration}
 
+	
 	\pagebreak
 
 	\section{Numerical methods}
+	\subsection{Locating roots}
+	\subsubsection{Method}
+	If a function $f(x)$ is continuous on the interval $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then $f(x)$ has at least one root, $x$, which satisfies $a<x<b$
+	\subsubsection{How change of sign can fail}
+	\begin{itemize}
+		\item When the interval is too large sign may not change as there may be an even number of roots
+		\item If the function is not continuous, sign may change but there may be an asymptote e.g. reciprocal
+	\end{itemize}
+	
+	\subsection{Iteration}
+	\begin{itemize}
+		\item Iterative formula can be found by rewriting $f(x)=0$ into $x=g(x)$, then $x_{n+1}=g(x_n)$
+		\item Find the value of $x_1$, $x_2$, $x_3$, etc.
+		\item If converge (get closer to the root from the same direction / alternate above and below the root) then solution can be found
+	\end{itemize}
+	
+	\subsection{The Newton-Raphson method}
+	\begin{itemize}
+		\item $x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}$
+		\item Find approximation to $x$ decimal places
+		\item Show accurate to $x$ decimal places: use change in sign to show
+		\item[$\star$] If any value of $x_i$ is at a turning point then the method will fail as $f'(x)=0$ which results in division by zero
+	\end{itemize}
+	
+	\subsection{The trapezium rule}
+	$\int_{a}^{b}y\:dx \approx \dfrac{1}{2} (y_0+2(y_1+y_2+\dots+y_{n-1})+y_n)$ where $h=\dfrac{b-a}{n}$ and $y_i=f(a+ih)$
 
 
 	\pagebreak
 
 	\section{Vectors}
-
-
-
+	\subsection{Angle with x-, y-, and z-axis}
+	If $\vec{a}=x\vec{i}+y\vec{j}+z\vec{k}$ makes an angle $\theta_x$ with the positive x-axis then $\cos \theta_x=\dfrac{x}{|a|}$, similarly for angles $\theta_y$ and $\theta_z$
+	\subsection{Vectors in equations}
+	\subsubsection{2D}
+	If $\vec{a}$ and $\vec{b}$ are 2 non-parallel vectors and $p\vec{a}+q\vec{b}=r\vec{a}+s\vec{b}$ then $p=r$ and $q=s$
+	\subsubsection{3D}
+	If $\vec{a}$, $\vec{b}$ and $\vec{c}$ are vectors in 3 dimensions which do not all lie on the same plane (parallel to the same plane) then you can compare their coefficients on both sides of an equation
 
 	\end{document}

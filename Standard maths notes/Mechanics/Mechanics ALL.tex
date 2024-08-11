@@ -53,14 +53,69 @@
 	\pagebreak
 
 	\section{Forces and motion}
+	
 	\subsection{Types of motion}
+	
 	\subsubsection{Constant speed motion}
 	\textbf{Calculations:}
 	\begin{itemize}
 		\item $v$ is constant, $a=0$
 		\item $d=vt$
 	\end{itemize}
-	\textbf{Motion graphs:}
+	\textbf{Motion graphs:}\\
+	%d-t graph
+	\begin{tikzpicture}
+		\begin{axis}[
+			xmin = 0, xmax = 30,
+			ymin = 0, ymax = 30, axis lines=center, axis line style={thick},
+			width=0.3\textwidth, height=0.3\textwidth,
+			xlabel=$t$,ylabel=$d$,
+			yticklabel=\empty, xticklabel=\empty]
+			\addplot[
+			domain = 0:30,
+			samples = 200,
+			smooth,
+			thick,
+			red,
+			] {x};
+		\end{axis}
+	\end{tikzpicture}
+	%v-t graph
+	\begin{tikzpicture}
+		\begin{axis}[
+			xmin = 0, xmax = 30,
+			ymin = 0, ymax = 30, axis lines=center, axis line style={thick},
+			width=0.3\textwidth, height=0.3\textwidth,
+			xlabel=$t$,ylabel=$v$,
+			yticklabel=\empty, xticklabel=\empty]
+			\addplot[
+			domain = 0:30,
+			samples = 200,
+			smooth,
+			thick,
+			red,
+			] {20};
+		\end{axis}
+	\end{tikzpicture}
+	%a-t graph
+	\begin{tikzpicture}
+		\begin{axis}[
+			xmin = 0, xmax = 30,
+			ymin = 0, ymax = 30, axis lines=center, axis line style={thick},
+			width=0.3\textwidth, height=0.3\textwidth,
+			xlabel=$t$,ylabel=$a$,
+			yticklabel=\empty, xticklabel=\empty]
+			\addplot[
+			domain = 0:30,
+			samples = 200,
+			smooth,
+			thick,
+			red,
+			] {0};
+		\end{axis}
+	\end{tikzpicture}
+	
+	
 	\subsubsection{Uniform acceleration motion}
 	\textbf{Calculations:}
 	\begin{itemize}
@@ -70,7 +125,6 @@
 		\item $d=\overline{v}t$
 		\item $\overline{v} = \dfrac{v_i+v_f}{2}$
 	\end{itemize}
-	\textbf{\textbf{Motion graphs:}}
 
 	\subsubsection{Free fall}
 	Air resistance is ignored, so $a=g$\\
@@ -96,11 +150,59 @@
 		\item Time to greatest height: $\dfrac{u\sin\theta}{g}$
 	\end{itemize}
 	\subsection{Types of forces}
-
+	\begin{description}
+		\item[Weight: ] $W=mg$
+		\item[Normal contact force: ] symbol = $R$ or $N$
+		\item[Static friction: ] Depends on driving force, $F\leq \mu R$
+		\item[Dynamic friction: ] $f=\mu R$ ($\mu$=coefficient of kinetic friction)
+		\item[Tension: ] $T=\text{elastic coefficient}\times\text{extension}=k\times\Delta x$
+	\end{description}
+	
+	\subsection{Common scenarios}
+	\subsubsection{Lift}
+	\begin{description}
+		\item[Rising: ] $R-W=ma$
+		\item[Moving down: ] $W-R=ma$
+		\item[On rest: ] $R=W$
+	\end{description}
+	
+	\subsubsection{Slope}
+	\begin{itemize}
+		\item Coordinate: centre = object, x-axis = slope surface, y-axis = perpendicular to slope surface
+		\item Calculate resultant force in $x$ and $y$ direction
+		\item Use SUVAT equations to find distance / speed / time
+	\end{itemize}
+	
+	\subsubsection{One whole system}
+	e.g. on a train / car
+	\begin{itemize}
+		\item Acceleration is the same across the whole system
+		\item Internal force can be ignored
+		\item Tension at the same rope has the same magnitude
+	\end{itemize}
+	
+	\subsubsection{Fixed pulley}
+	\begin{itemize}
+		\item Same tension
+		\item Same magnitude for acceleration (different direction)
+		\item Use simultaneous equations to find tension
+	\end{itemize}
+	
 	\pagebreak
 
 	\section{Momentum}
-
+	\subsection{Definitions}
+	\begin{itemize}
+		\item $p=mv$
+		\item $\Delta p = m\Delta v = m a t = Ft$
+		\item Impulse = $Ft=\delta p = m(v_f-v_i)$
+	\end{itemize}
+	
+	\subsection{Collision}
+	\begin{description}
+		\item[Elastic: ] KE conserved
+		\item[Inelastic: ] KE not conserved
+	\end{description}
 
 	\pagebreak
 
@@ -114,12 +216,20 @@
 	$\vec{a} \times \vec{b}$= from $\vec{a}$ to $\vec{b}$\\
 	$\vec{b} \times \vec{a}$= from $\vec{b}$ to $\vec{a}$
 	
+	\subsection{Tilting about a pivot}
+	Support / tension force at any point = 0
+	
 
 	\pagebreak
 
 	\section{Common questions}
 	\subsection{Projectile}
 	\subsubsection{Asking for improvements}
+	\begin{itemize}
+		\item Ball modelled as particle / no volume
+		\item Air resistance ignored
+		\item Ball doesn't spin / spin ignored
+	\end{itemize}
 	
 	
 	
