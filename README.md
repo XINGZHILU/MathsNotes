@@ -1,2 +1,2 @@
 # MathsNotes
- A Level Maths and Further Maths notes - source code
+By Xingzhi Lu (2129570@concordcollege.org.uk)
