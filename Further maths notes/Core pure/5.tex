@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+	\draw[->, thick] (-0.5,0)--(4,0) node[right]{$x$};
+	\draw[->, thick] (0,-0.5)--(0,3.5) node[above]{$y$};
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (3.5,0);
+	\coordinate (B) at (3.5,3);
+	\draw [dotted] (A) -- (B);
+	\draw [->] (O) -- (B);
+	\node[below] at (2,0) {a};
+	\node [right] at (3.5,1.5) {b};
+	\node [above left] at (1.75, 1.5) {r};
+	\tikzAngleOfLine(O)(A){\AngleStart}
+	\tikzAngleOfLine(O)(B){\AngleEnd}
+	\draw[black,<->] (O)+(\AngleStart:0.7cm) arc (\AngleStart:\AngleEnd:0.7cm);
+	\node [above right] at (0.65, 0) {$\theta$};
+\end{tikzpicture}

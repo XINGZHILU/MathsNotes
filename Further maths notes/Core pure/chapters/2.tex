@@ -1,0 +1,42 @@
+\subsection{Forms expressing complex number}
+\begin{tikzpicture}
+	\draw[->, thick] (-0.5,0)--(4,0) node[right]{$x$};
+	\draw[->, thick] (0,-0.5)--(0,3.5) node[above]{$y$};
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (3.5,0);
+	\coordinate (B) at (3.5,3);
+	\draw [dotted] (A) -- (B);
+	\draw [->] (O) -- (B);
+	\node[below] at (2,0) {a};
+	\node [right] at (3.5,1.5) {b};
+	\node [above left] at (1.75, 1.5) {r};
+	\tikzAngleOfLine(O)(A){\AngleStart}
+	\tikzAngleOfLine(O)(B){\AngleEnd}
+	\draw[black,<->] (O)+(\AngleStart:0.7cm) arc (\AngleStart:\AngleEnd:0.7cm);
+	\node [above right] at (0.65, 0) {$\theta$};
+\end{tikzpicture}
+\subsubsection{Cartesian form}
+$z=a+bi$\\
+$\operatorname{Re}(z) = a$, $\operatorname{Im}(z) = b$\\
+$|z|=\sqrt{a^2+b^2}$
+\subsubsection{Polar form}
+$z=(r,\theta)$\\
+$r=\sqrt{a^2+b^2}$, $\theta = \arg(z)$\\
+$a=r\cos\theta$, $b=r\sin\theta$, $\tan\theta=\dfrac{b}{a}$\\
+$z=r\cos\theta+r\sin\theta i = r(\cos\theta+\sin\theta i)=r\cis \theta$
+
+\subsubsection{Exponential / Euler form}
+$z=re^{i\theta}$
+
+
+\subsection{Calculations}
+\begin{itemize}
+	\item $z_1z_2=r_1r_2\cis(\theta1+\theta2)=r_1r_2e^{i((\theta1+\theta2))}$
+	\item $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cis(\theta1-\theta2)=\dfrac{r_1}{r_2}e^{i((\theta1-\theta2))}$
+	\item $z^n = r^n\cis(n\theta)=r^ne^{i\theta n}$
+	\item $\sqrt[n]{z}=\sqrt[n]{r}\cis(\dfrac{\theta+2k\pi}{n})=\sqrt[n]{r}e^{i\dfrac{\theta+2k\pi}{n}}$ ($k=0,1,2,\dots,n-2,n-1$)
+	\item $\sqrt{a+ib}=\pm(\sqrt{\dfrac{|z|+a}{2}}+i\dfrac{b}{|b|}\sqrt{\dfrac{|z|-a}{2}})$
+	\item $\arg(z_1z_2)=\arg(z_1)+\arg(z_2)$
+	\item $\arg(\dfrac{z_1}{z_2})=\arg(z_1)-\arg(z_2)$
+\end{itemize}
+
