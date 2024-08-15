@@ -27,16 +27,93 @@ $z=r\cos\theta+r\sin\theta i = r(\cos\theta+\sin\theta i)=r\cis \theta$
 
 \subsubsection{Exponential / Euler form}
 $z=re^{i\theta}$
+\subsubsection{When to use which form}
+\begin{description}
+	\item[Addition / subtraction: ] Cartesian form
+	\item[Multiple / division / power / root: ] Polar / Euler form
+\end{description}
 
 
 \subsection{Calculations}
 \begin{itemize}
-	\item $z_1z_2=r_1r_2\cis(\theta1+\theta2)=r_1r_2e^{i((\theta1+\theta2))}$
-	\item $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cis(\theta1-\theta2)=\dfrac{r_1}{r_2}e^{i((\theta1-\theta2))}$
+	\item $z_1z_2=r_1r_2\cis(\theta_1+\theta_2)=r_1r_2e^{i((\theta_1+\theta_2))}$
+	\item $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cis(\theta_1-\theta_2)=\dfrac{r_1}{r_2}e^{i((\theta_1-\theta_2))}$
 	\item $z^n = r^n\cis(n\theta)=r^ne^{i\theta n}$
-	\item $\sqrt[n]{z}=\sqrt[n]{r}\cis(\dfrac{\theta+2k\pi}{n})=\sqrt[n]{r}e^{i\dfrac{\theta+2k\pi}{n}}$ ($k=0,1,2,\dots,n-2,n-1$)
+	\item De Moivre's theorem: $\sqrt[n]{z}=\sqrt[n]{r}\cis(\dfrac{\theta+2k\pi}{n})=\sqrt[n]{r}e^{i(\dfrac{\theta+2k\pi}{n})}$ ($k=0,1,2,\dots,n-2,n-1$)
 	\item $\sqrt{a+ib}=\pm(\sqrt{\dfrac{|z|+a}{2}}+i\dfrac{b}{|b|}\sqrt{\dfrac{|z|-a}{2}})$
 	\item $\arg(z_1z_2)=\arg(z_1)+\arg(z_2)$
 	\item $\arg(\dfrac{z_1}{z_2})=\arg(z_1)-\arg(z_2)$
+	\item[$\star$] Complex numbers' sizes cannot be compared
 \end{itemize}
+
+
+\subsection{Conjugate}
+\begin{itemize}
+	\item $|z|=|z^*|$
+	\item $z\cdot z^*= |z|^2$
+	\item If $z=z*$ then z is a real number
+	\item If $z=-z*$ then z is a pure imaginary number
+\end{itemize}
+
+\subsection{Deducing multiple angle formulae by complex number}
+\subsubsection{Properties for $z$}
+\begin{itemize}
+	\item $z=\cis\theta=e^{i\theta}=\cos\theta + i\sin\theta$, $\dfrac{1}{z} = e^{-i\theta} = \cis (-\theta)$
+	\item $z+\dfrac{1}{z}=2\cos\theta$
+	\item $(z+\dfrac{1}{z})^n=(e^{i\theta}+e^{-i\theta})^n=2^n\cos^n\theta$
+	\item $z-\dfrac{1}{z}=2i\sin\theta$
+	\item $(z-\dfrac{1}{z})^n=(e^{i\theta}-e^{-i\theta})^n=2^n i^n \sin^n\theta$
+	\item $z^n+\dfrac{1}{z^n}=2\cos (n\theta)$
+	\item $z^n-\dfrac{1}{z^n}=2i\sin (n\theta)$
+\end{itemize}
+\subsubsection{Finding $\sin (n\theta)$ or $\cos (n\theta)$}
+\begin{enumerate}
+	\item Use $(z+\dfrac{1}{z})$ for $\cos$ and $(z+\dfrac{1}{z})$ for $\sin$
+	\item Use the $n$th power of $z+\dfrac{1}{z}$ or $z-\dfrac{1}{z}$ ($n$ is the same as coefficient)
+	\item Binomial expansion
+	\item Merge the terms into $z^n+\dfrac{1}{z^n}$ or $z^n-\dfrac{1}{z^n}$
+	\item Use properties above to convert then into trig functions
+\end{enumerate}
+\subsubsection{Find $\sin^n\theta$}
+\textbf{$n$ is odd:}
+\begin{itemize}
+	\item $n=4k+1$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[\binom{n}{0}\sin n\theta - \binom{n}{1}\sin (n-2)\theta + \binom{n}{1}\sin (n-4)\theta - \dots + \binom{n}{\frac{n-1}{2}}\sin \theta]$
+	\item $n=4k+3$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\sin n\theta + \binom{n}{1}\sin (n-2)\theta - \binom{n}{1}\sin (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\sin \theta]$
+\end{itemize}
+\textbf{$n$ is even:}
+\begin{itemize}
+	\item $n=4k$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\cos n\theta + \binom{n}{1}\cos (n-2)\theta - \binom{n}{1}\cos (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\cos \theta]$
+	\item $n=4k+2$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\cos n\theta + \binom{n}{1}\cos (n-2)\theta - \binom{n}{1}\cos (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\cos \theta]$
+\end{itemize}
+\subsubsection{Find $\cos^n\theta$}
+\begin{itemize}
+	\item $\cos^n\theta = \dfrac{1}{2^{n-1}}\sum$
+	\item $\int \cos^n\theta \: d\theta = \dfrac{1}{2^{n-1}} \sum_{i=0}^{\ceil{\frac{n-1}{2}}} \binom{n}{i} \dfrac{\sin (n-2i)\theta}{den}$
+\end{itemize}
+
+
+\subsection{Argand diagrams}
+\subsubsection{Circle}
+\begin{itemize}
+	\item $|z| = a$: circle with centre $O$, radius $a$
+	\item $|z-z_0|=a$: circle with centre $z_0$, radius $a$
+	\item $|z-z_0|<a$: circle with centre $z_0$, radius $a$, shaded in
+	\item $|z-z_0|>a$: circle with centre $z_0$, radius $a$, outside of circle shaded
+\end{itemize}
+\subsubsection{Perpendicular bisector}
+\begin{itemize}
+	\item $|z-z_1|=|z-z_2|$: $z$ on perpendicular bisector of $z_1z_2$
+	\item $|z-z_1|<|z-z_2|$ / $|z-z_1|>|z-z_2|$: on the left / right side of perpendicular bisector, bisector = dotted line
+\end{itemize}
+\subsubsection{Argument angle}
+\begin{itemize}
+	\item $\arg z = \theta$: ray starting from origin, angle with x-axis = $\theta$
+	\item $\arg (z-z_0) = \theta$: ray starting from $z_0$, angle with horizontal = $\theta$
+\end{itemize}
+\subsubsection{Ellipse}
+\begin{itemize}
+	\item $|z-z_1|+|z-z_2|=2a$: ellipse with focus at $z_1$ and $z_2$, longest diameter = $2a$
+\end{itemize}
+
+
 
