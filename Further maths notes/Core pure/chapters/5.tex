@@ -2,3 +2,29 @@
 Volume = $\pi\int y^2 \: dx$ or $\pi\int x^2 \: dy$
 
 \subsection{Inverse trig differentiation and integration}
+\begin{tabular}{ll}
+	$f(x)$ & $\int f(x) \: dx$\\
+	$\dfrac{1}{\sqrt{a^2-x^2}}$ & $\arcsin(\dfrac{x}{a})$\\
+	$\dfrac{1}{a^2+x^2}$ & $\dfrac{1}{a}\arctan(\dfrac{x}{a})$\\
+	$\dfrac{1}{\sqrt{x^2-a^2}}$ & $\text{arcosh}(\dfrac{x}{a})$, $\ln(x+\sqrt{x^2-a^2}) (x>a)$\\
+	$\dfrac{1}{\sqrt{x^2-a^2}}$ & $\text{arsinh}(\dfrac{x}{a})$, $\ln(x+\sqrt{x^2+a^2})$\\
+	$\dfrac{1}{a^2-x^2}$ & $\dfrac{1}{2a}\ln |\dfrac{a+x}{a-x}| = \dfrac{1}{a}\text{artanh}(\dfrac{x}{a})$\\
+	$\dfrac{1}{x^2-a^2}$ & $\dfrac{1}{2a}\ln |\dfrac{x-a}{x+a}|$\\
+\end{tabular}
+
+\subsection{Trig substitution for square roots}
+\begin{itemize}
+	\item $\sqrt{a(x+b)^2-c}$
+	\begin{description}
+		\item[Substitution:] $x = \sqrt{\dfrac{c}{a}}\sec\theta - b$
+	\end{description}
+	\item $\sqrt{a(x+b)^2+c}$
+	\begin{description}
+		\item[Substitution:] $x = \sqrt{\dfrac{c}{a}}\tan\theta - b$
+	\end{description}
+	\item $\sqrt{-a(x+b)^2-c}$
+	\begin{description}
+		\item[Substitution:] $x = \sqrt{\dfrac{c}{a}}\cos\theta - b$ or $\sqrt{\dfrac{c}{a}}\sin\theta - b$
+	\end{description}
+	
+\end{itemize}

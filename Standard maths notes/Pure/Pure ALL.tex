@@ -18,6 +18,7 @@
 	\maketitle
 	\tableofcontents
 	\pagebreak
+	
 	\section{Proof}
 	\subsection{Methods}
 	\begin{itemize}
@@ -100,7 +101,7 @@
 		\item Find the range of $x$ by using the original parametric equation
 		\item Find the range of $y$ using original equation / considering the domain of $x$
 	\end{itemize}
-	\subsubsection{Sketching curve}
+	\subsubsection{Sketching curves}
 	Sketch at regular intervals of $t$
 
 
@@ -191,7 +192,17 @@
 
 	\subsubsection{arcsin, arccos, arctan}
 	\includegraphics[scale=0.7]{arcsincostan}
-
+	
+	\subsection{Trig equations}
+	\subsubsection{Principal values}
+	The angle that you get when you use the inverse trigonometric functions on the calculator
+	\begin{itemize}
+		\item $\sin^{-1}$: $-90\leq\theta\leq90$
+		\item $\cos^{-1}$: $0\leq\theta\leq180$
+		\item $\tan^{-1}$: $-90\leq\theta\leq90$
+	\end{itemize}
+	
+	\pagebreak
 
 	\section{Exponentials and logarithms}
 	\subsection{Sketching graphs}
@@ -204,7 +215,7 @@
 	\end{description}
 
 	\subsection{Logarithm}
-	$a^x = n$: $\log_a n = x$ ($a\neq1$ and $a>0$, $x\geq0$)
+	$a^x = n$: $\log_a n = x$ ($a\neq1$ and $a>0$, $x>0$)
 	\subsubsection{Laws}
 	\begin{description}
 		\item[The multiplication law:] $\log_a x + \log_a y = \log_a xy$
@@ -237,18 +248,12 @@
 	$f'(x) = \lim\limits_{n \to 0}\dfrac{f(x+h)-f(x)}{h}$
 
 	\subsection{Formulae}
-	\begin{tabular}{|l|l|}
-		\hline
+	\begin{tabular}{ll}
 		$\mathbf{f(x)}$ & $\mathbf{f'(x)}$ \\
-		\hline
 		$\tan kx$ & $k\sec^2 kx$ \\
-		\hline
 		$\sec kx$ & $k\sec kx \tan kx$ \\
-		\hline
 		$\cot kx$ & $-k\cosec^2 kx$ \\
-		\hline
 		$\cosec kx$ & $-k\cosec kx \cot kx$ \\
-		\hline
 	\end{tabular}
 
 	\subsection{Rules}
@@ -320,7 +325,7 @@
 			\item[T:] trigonometry
 		\end{description}
 	\end{itemize}
-
+	
 	
 	\pagebreak
 
@@ -339,6 +344,7 @@
 		\item Iterative formula can be found by rewriting $f(x)=0$ into $x=g(x)$, then $x_{n+1}=g(x_n)$
 		\item Find the value of $x_1$, $x_2$, $x_3$, etc.
 		\item If converge (get closer to the root from the same direction / alternate above and below the root) then solution can be found
+		\item Test for roots using the change of sign of function $h(x)=g(x)-x$
 	\end{itemize}
 	
 	\subsection{The Newton-Raphson method}
@@ -350,7 +356,7 @@
 	\end{itemize}
 	
 	\subsection{The trapezium rule}
-	$\int_{a}^{b}y\:dx \approx \dfrac{1}{2} (y_0+2(y_1+y_2+\dots+y_{n-1})+y_n)$ where $h=\dfrac{b-a}{n}$ and $y_i=f(a+ih)$
+	$\int_{a}^{b}y\:dx \approx \dfrac{1}{2} h (y_0+2(y_1+y_2+\dots+y_{n-1})+y_n)$ where $h=\dfrac{b-a}{n}$ and $y_i=f(a+ih)$
 
 
 	\pagebreak

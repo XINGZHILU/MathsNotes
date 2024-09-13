@@ -198,7 +198,59 @@
 		\item x-axis = $\ln x$, y-axis = $y$, gradient = $a$
 	\end{itemize}
 	
+	
+	\subsection{Large data set}
+	\subsubsection{Scope}
+	\begin{itemize}
+		\item Months included: May - October
+		\item Years included: 2015 and 1987
+	\end{itemize}
+	\subsubsection{Cities}
+	\includegraphics{LDSmap}\\
+	Ordered from north to south:
+	\begin{enumerate}
+		\item Leuchars
+		\item Leeming
+		\item Heathrow
+		\item Hurn
+		\item Camborne
+		\item Beijing
+		\item Jacksonville
+		\item Perth (Southern hemisphere)
+	\end{enumerate}
+	
+	\subsubsection{Data recorded}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{Variable} & \textbf{Unit} & \textbf{Precision}\\
+		\hline
+		Daily mean temperature & Celsius & to 1 dp\\
+		\hline
+		Daily total rainfall & mm & to 1 dp (tr = less than 0.05 mm, treat as 0)\\
+		\hline
+		Daily total sunshine & hours & to 1 dp \\
+		\hline
+		Daily maximum relative humidity & as a percentage & nearest integer \\
+		\hline
+		Daily mean wind direction & degree + cardinal direction & nearest integer  \\
+		\hline
+		Daily mean windspeed & knots / Beaufort conversion & nearest integer \\
+		\hline
+		Daily maximum gust & knots & nearest integer   \\
+		\hline
+		Daily maximum gust direction & degree + cardinal direction & nearest integer   \\
+		\hline
+		Daily mean cloud cover & oktas  & integer from 0-8   \\
+		\hline
+		Daily mean visibility & decametres (Dm) & nearest 100  \\
+		\hline
+		Daily mean pressure & hectopascals (hPa) & nearest integer  \\
+		\hline
+	\end{tabular}
+	
+	
 	\pagebreak
+	
 
 	
 	\section{Statistical distributions}
