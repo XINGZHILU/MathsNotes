@@ -40,6 +40,9 @@ $z=re^{i\theta}$
 	\item $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cis(\theta_1-\theta_2)=\dfrac{r_1}{r_2}e^{i((\theta_1-\theta_2))}$
 	\item $z^n = r^n\cis(n\theta)=r^ne^{i\theta n}$
 	\item De Moivre's theorem: $\sqrt[n]{z}=\sqrt[n]{r}\cis(\dfrac{\theta+2k\pi}{n})=\sqrt[n]{r}e^{i(\dfrac{\theta+2k\pi}{n})}$ ($k=0,1,2,\dots,n-2,n-1$)
+	\begin{itemize}
+		\item[$\star$] They form vertices of a regular n-gon in the Argand diagram with its centre at the origin
+	\end{itemize}
 	\item $\sqrt{a+ib}=\pm(\sqrt{\dfrac{|z|+a}{2}}+i\dfrac{b}{|b|}\sqrt{\dfrac{|z|-a}{2}})$
 	\item $\arg(z_1z_2)=\arg(z_1)+\arg(z_2)$
 	\item $\arg(\dfrac{z_1}{z_2})=\arg(z_1)-\arg(z_2)$
@@ -49,7 +52,7 @@ $z=re^{i\theta}$
 \begin{itemize}
 	\item $|z_1z_2|=|z_1||z_2|$
 	\item $|\dfrac{z_1}{z_2}|=\dfrac{|z_1|}{|z_2|}$
-	\item $||z_1|-|z_2|| \leq |z_1 \pm z_2| \leq |z_1|+|z_2|$
+	\item $||z_1|-|z_2|| \leq |z_1 \pm z_2| \leq |z_1|+|z_2|$ (triangular sum and difference)
 \end{itemize}
 
 
@@ -61,7 +64,7 @@ $z=re^{i\theta}$
 	\item If $z=-z*$ then z is a pure imaginary number
 \end{itemize}
 
-\subsection{Deducing multiple angle formulae by complex number}
+\subsection{Trigonometric identities}
 \subsubsection{Properties for $z$}
 \begin{itemize}
 	\item $z=\cis\theta=e^{i\theta}=\cos\theta + i\sin\theta$, $\dfrac{1}{z} = e^{-i\theta} = \cis (-\theta)$
@@ -83,20 +86,26 @@ $z=re^{i\theta}$
 \subsubsection{Find $\sin^n\theta$}
 \textbf{$n$ is odd:}
 \begin{itemize}
-	\item $n=4k+1$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[\binom{n}{0}\sin n\theta - \binom{n}{1}\sin (n-2)\theta + \binom{n}{1}\sin (n-4)\theta - \dots + \binom{n}{\frac{n-1}{2}}\sin \theta]$
-	\item $n=4k+3$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\sin n\theta + \binom{n}{1}\sin (n-2)\theta - \binom{n}{1}\sin (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\sin \theta]$
+	\item $n=4k+1$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[\binom{n}{0}\sin n\theta - \binom{n}{1}\sin (n-2)\theta + \binom{n}{2}\sin (n-4)\theta - \dots + \binom{n}{\frac{n-1}{2}}\sin \theta]$
+	\item $n=4k+3$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\sin n\theta + \binom{n}{1}\sin (n-2)\theta - \binom{n}{2}\sin (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\sin \theta]$
 \end{itemize}
 \textbf{$n$ is even:}
 \begin{itemize}
-	\item $n=4k$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\cos n\theta + \binom{n}{1}\cos (n-2)\theta - \binom{n}{1}\cos (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\cos \theta]$
+	\item $n=4k$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[\binom{n}{0}\cos n\theta - \binom{n}{1}\cos (n-2)\theta + \binom{n}{1}\cos (n-4)\theta - \dots + \binom{n}{\frac{n-1}{2}}\cos \theta]$
 	\item $n=4k+2$: $\sin^n\theta=\dfrac{1}{2^{n-1}}[-\binom{n}{0}\cos n\theta + \binom{n}{1}\cos (n-2)\theta - \binom{n}{1}\cos (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\cos \theta]$
 \end{itemize}
 \subsubsection{Find $\cos^n\theta$}
 \begin{itemize}
-	\item $\cos^n\theta = \dfrac{1}{2^{n-1}}\sum$
-	\item $\int \cos^n\theta \: d\theta = \dfrac{1}{2^{n-1}} \sum_{i=0}^{\ceil{\frac{n-1}{2}}} \binom{n}{i} \dfrac{\sin (n-2i)\theta}{den}$
+	\item $\cos^n\theta = \dfrac{1}{2^{n-1}}\sum_{i=0}^{\ceil{\frac{n-1}{2}}} \binom{n}{i}\cos (n-2i)\theta$
+	\item $\int \cos^n\theta \: d\theta = \dfrac{1}{2^{n-1}} \sum_{i=0}^{\ceil{\frac{n-1}{2}}} \binom{n}{i} \dfrac{\sin (n-2i)\theta}{n-2i}$
 \end{itemize}
 
+\subsection{Sum of geometric series}
+For $w, z \in \textbf{C}$:
+\begin{itemize}
+	\item $\sum\limits_{r=0}^{n-1}wz^r=\dfrac{w(z^n-1)}{z-1}$
+	\item $\sum\limits_{r=0}^{n-1}wz^r=\dfrac{w}{1-z}$, $|z|<1$
+\end{itemize}
 
 \subsection{Argand diagrams}
 \subsubsection{Circle}
@@ -120,6 +129,13 @@ $z=re^{i\theta}$
 \begin{itemize}
 	\item $|z-z_1|+|z-z_2|=2a$: ellipse with focus at $z_1$ and $z_2$, longest diameter = $2a$
 \end{itemize}
+
+\subsection{Roots of unity}
+\begin{itemize}
+	\item If $z_1$ is one root of the equation $z^n=s$, and $1,\omega,\omega^2,\dots,\omega^{n-1}$ are the nth roots of unity, then the roots of $z^n=s$ are given by $z_1, z_1\omega, z_1\omega^2, \dots, z_1\omega^{n-1}$
+	\item For equation $z^n=1$: $\omega=e^{i\frac{\pi}{n}}$, $\omega^n=1$
+\end{itemize}
+
 
 
 

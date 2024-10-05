@@ -12,4 +12,15 @@ For $a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots +a_{1}x+a_{0}=0$:
 $\sum_{r=1}^{n} r^2=\dfrac{n(n+1)(2n+1)}{6}$ 
 \subsubsection{Summation of cubes}
 $\sum_{r=1}^{n} r^3=\dfrac{(n(n+1))^2}{4}$
-\subsection{Maclaurin series}
+\subsection{Maclaurin series of expansion}
+$f(x)=f(0)+f'(0)x+\dfrac{f''(0)x^2}{2!}+\dots+\dfrac{f^{(r)}(0)x^r}{r!}+\dots$\\
+This series is valid provided that $f(0), f'(0), f''(0),\dots,f^{(r)}(0),\dots$ all have \textbf{finite values}
+
+\subsection{Series expansion of compound functions}
+\begin{itemize}
+	\item $e^{x}=1+x+\frac{x^{2}}{2!}+...+\frac{x^{r}}{r!}+...$ for all $x$
+	\item $\ln(1+x) = x - \frac{x^{2}}{2} + \frac{x^{3}}{3} + ... + (-1)^{r+1}\frac{x^{r}}{r!} +...$ for $-1<x\leq1$
+	\item $\sin x = \frac{e^{ix}-e^{-ix}}{2i}=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}+...+(-1)^r\dfrac{x^{2r+1}}{(2r+1)!}+\dots$ for all $x$
+	\item $\cos x = \frac{e^{ix}+e^{-ix}}{2}=1-\frac{x^{2}}{2!}+\frac{x^{4}}{4!}-...+(-1)^r\dfrac{x^{2r}}{(2r)!}+\dots$ for all $x$
+	\item $\arctan x = x-\dfrac{x^3}{x}+\dfrac{x^5}{5}-\dots+(-1)^r\dfrac{x^{2r+1}}{2r+1}+\dots$ for $-1<x\leq1$
+\end{itemize}
