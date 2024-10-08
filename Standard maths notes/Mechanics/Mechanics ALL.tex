@@ -10,6 +10,8 @@
 \usepackage{bookmark}
 \DeclareMathOperator\cosec{cosec}
 
+\usepackage{tabularx}
+
 \graphicspath{ {./images/} }
 
 \setlength{\parindent}{0pt}
@@ -218,14 +220,13 @@
 	
 
 
-	\section{Common questions}
-	\subsection{Modelling}
-	\subsubsection{Types of model}
-	\begin{tabular}{|c|c|}
+	\section{Modelling}
+	\subsection{Assumptions}
+	\begin{tabular}{|m{3.5cm} | m{13.5cm}|}
 		\hline
 		\textbf{Model} & \textbf{Assumptions} \\
 		\hline
-		Particle & Mass of the object is concentrated at a single point, rotational forces and air resistance can be ignored \\
+		Particle & Mass of the object is concentrated at a single point, rotational forces and air resistance can be ignored, volume is negligible \\
 		\hline
 		Rod & Mass is concentrated along a line, no thickness, rigid \\
 		\hline
@@ -241,9 +242,9 @@
 		\hline
 		Rough surface &  Objects experience a frictional force if they are moving or acted on by a force  \\
 		\hline
-		Wire &  Treat as one-dimensional  \\
+		Wire &  Treat as one-dimensional, doesn't bend (rigid) \\
 		\hline
-		Smooth and light pulley & Pulley has no mass, tension is the same on either side of the pulley   \\
+		Smooth and light pulley & Pulley has no mass, tension is the same on either side of the pulley, no friction around the pulley \\
 		\hline
 		Bead & Mores freely along a wire or string, tension is the same on either side  \\
 		\hline
@@ -251,24 +252,9 @@
 		\hline
 		Air resistance & Usually negligible  \\
 		\hline
-		Gravity &  All objects with mass are attracted towards the Earth, gravity is uniform and acts vertically downwards, $g$ is constant and is taken as $9.8 \text{m s}^-2$  \\
+		Gravity &  All objects with mass are attracted towards the Earth, gravity is uniform and acts vertically downwards, $g$ is constant and is taken as $9.8 \: \mathrm{m} \: \mathrm{s}^{-2}$ unless otherwise stated \\
 		\hline
 	\end{tabular}
-	
-
-	\subsection{Projectile}
-	\subsubsection{Asking for improvements}
-	\begin{itemize}
-		\item Ball modelled as particle / no volume
-		\item Air resistance ignored
-		\item Ball doesn't spin / spin ignored
-	\end{itemize}
-	\subsection{Moment}
-	\subsubsection{Plank modelling}
-	\begin{description}
-		\item[Modelled as rod: ] Plank remains straight
-		\item[Mass modelled as particles: ] Weights act at the ends of plank
-	\end{description}
 	
 	
 	
