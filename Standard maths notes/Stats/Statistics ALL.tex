@@ -1,4 +1,4 @@
-\documentclass[A4paper]{article}
+\documentclass[A4paper, 11pt]{article}
 \usepackage[a4paper, total={7.2in, 10.5in}]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -13,26 +13,28 @@
 
 \title{A Level Mathematics - Statistics}
 \author{Xingzhi Lu}
+\date{For exam in 2025}
 
 \usepackage{mathptmx}
 
 \begin{document}
 	\maketitle
 	\section{Statistical sampling}
+	
 	\subsection{Populations and samples}
 	\subsubsection{Definitions}
 	\begin{description}
 		\item[Population:] The whole set of items that are of interest
 		\item[Census:] Observes or measures every member of a population
 		\item[Sample:] A selection of observations taken from a subset of the population which is used
-		\item[Sampling unit:] Individual units of a population
+		\item[Sampling unit:] Individual units of a population that cam be sampled
 		\item[Sampling frame:] A list of all people or item that can potentially be involved in the sample
 	\end{description}
 	
 	\subsubsection{Census}
 	\textbf{Advantages}
 	\begin{itemize}
-		\item Gives a completely accurate result
+		\item Gives a completely accurate result, no bias
 	\end{itemize}
 	\textbf{Disadvantages}
 	\begin{itemize}
@@ -43,38 +45,51 @@
 	\subsubsection{Sample}
 	\textbf{Advantages}
 	\begin{itemize}
-		\item Less time consuming and expensive than a census
-		\item Fewer people have to respond
-		\item Less data to process than in a census
+		\item Easier to implement
+		\item Quicker to implement
+		\item Less data to process
 	\end{itemize}
 	\textbf{Disadvantages}
 	\begin{itemize}
-		\item The data may be less accurate
+		\item The data may not be representative
 		\item The sample may not be large enough to give information about small sub-groups of the population
+	\end{itemize}
+	\subsubsection{Sample size}
+	\begin{itemize}
+		\item Larger sample size = better accuracy
+		\item If the population is varied a larger sample size is needed to make sure that the sample is representative
 	\end{itemize}
 	
 	
 	\subsection{Random sampling methods}
 	\subsubsection{Simple random sampling}
+	\textbf{Definition}
+	\begin{itemize}
+		\item Every possible sample of size $n$ has an \textbf{equal chance} of being picked
+	\end{itemize}
 	\textbf{Method}
 	\begin{enumerate}
 		\item Each sampling unit is numbered from 1 to $n$
-		\item Generate $x$ random number between 1 to $n$ using random number generator / lottery picks / random number tables (or draw out $x$ names with lottery pick)
+		\item Generate $x$ random number between 1 to $n$ using random number generators / lottery picks / random number tables (or draw out $x$ names from the lottery hat)
 		\item Sampling units corresponding to these numbers become the sample
 		\item Data taken from the sample
 	\end{enumerate}
 	\textbf{Advantages}
 	\begin{itemize}
-		\item No bias
+		\item Free of bias
 		\item Easy and cheap to implement for small populations and small samples
 		\item Each sampling unit has a known and equal chance of selection
 	\end{itemize}
 	\textbf{Disadvantages}
 	\begin{itemize}
-		\item Not suitable when the population size or the sample size is large
+		\item Not suitable when the population size or the sample size is large as it is potentially time consuming, disruptive and expensive
 		\item A sampling frame is needed
 	\end{itemize}
 	\subsubsection{Systematic sampling}
+	\textbf{Definition}
+	\begin{itemize}
+		\item The required elements are chosen at \textbf{regular intervals} from an \textbf{ordered list}
+	\end{itemize}
 	\textbf{Method}
 	\begin{enumerate}
 		\item The population is ordered with a unique number each from 1 to $n$
@@ -93,17 +108,20 @@
 		\item It can introduce bias if the sampling frame is not random
 	\end{itemize}
 	\subsubsection{Stratified sampling}
+	\textbf{Definition}
+	\begin{itemize}
+		\item The population is divided into mutually exclusive strata and a random sample is taken from each
+	\end{itemize}
 	\textbf{Method}
 	\begin{enumerate}
-		\item Population divided into groups / stratas
-		\item Same proportion ($\dfrac{\text{Sample size}}{\text{Population size}}$) sampled from each strata (Work out size of each strata)
-		\item Simple random sampling carried out in each group
-		\item Used when sample is large and population naturally divides into groups
+		\item Population divided into \textbf{non-overlapping} groups / strata
+		\item Same proportion ($\dfrac{\text{Sample size}}{\text{Population size}}$) sampled from each strata (work out the total population and the size of each strata individually, round if needed)
+		\item Simple random sampling carried out in each group (explain in more details here)
 	\end{enumerate}
 	\textbf{Advantages}
 	\begin{itemize}
 		\item Sample accurately reflects the population structure
-		\item Guaranteees proportional representation of groups within a population
+		\item Guarantees proportional representation of groups within a population
 	\end{itemize}
 	\textbf{Disadvantages}
 	\begin{itemize}
@@ -111,24 +129,6 @@
 		\item Selection within each stratum suffers from the same disadvantages as simple random sampling
 	\end{itemize}
 	\subsection{Non-random sampling methods}
-	\subsubsection{Opportunity sampling}
-	\textbf{Method}
-	\begin{enumerate}
-		\item Sample taken from people who are available at time of study and meet the criteria
-	\end{enumerate}
-	\textbf{Advantages}
-	\begin{itemize}
-		\item Easy to carry out
-		\item No sampling frame required
-		\item Inexpensive
-	\end{itemize}
-	\textbf{Disadvantages}
-	\begin{itemize}
-		\item Likely to be unrepresentative
-		\item Non-responses are not recorded
-		\item Highly dependent on individual researcher
-	\end{itemize}
-	
 	\subsubsection{Quota sampling}
 	\textbf{Method}
 	\begin{enumerate}
@@ -151,35 +151,66 @@
 		\item Non-responses are not recorded
 	\end{itemize}
 	
-	\pagebreak
+		\subsubsection{Opportunity / convenience / pragmatic sampling}
+	\textbf{Method}
+	\begin{enumerate}
+		\item Sample taken from people who are available at time of study and meet the criteria
+	\end{enumerate}
+	\textbf{Advantages}
+	\begin{itemize}
+		\item Easy to carry out
+		\item No sampling frame required
+		\item Inexpensive
+	\end{itemize}
+	\textbf{Disadvantages}
+	\begin{itemize}
+		\item Likely to be unrepresentative
+		\item Highly dependent on individual researcher
+	\end{itemize}
 	
 	\section{Data presentation and interpretation}
 	\subsection{Types of data}
 	\begin{description}
-		\item[Quantitative:] Associated with numerical observations
-		\item[Qualitative:] Associated with non-numerical observations
-		\item[Continuous:] Can take any value in a given range
-		\item[Sampling unit:] Can only take specific values in a given range
+		\item[Quantitative data:] Associated with numerical observations
+		\item[Qualitative data:] Associated with non-numerical observations
+		\item[Continuous data:] Can take any value in a given range
+		\item[Discrete data:] Can only take specific values in a given range
 	\end{description}
 	
-	\subsection{PMCC}
-	$a=\dfrac{\Sigma(x_i-\overline{x})(y_i-\overline{y})}{\sqrt{\Sigma(x_i-\overline{x})^2}\sqrt{\Sigma(y_i-\overline{y})^2}}$\\
-	$b=y-a\overline{x}$
+	\subsection{Linear regression}
+	* Work these out using a calculator in exams
+	\subsubsection{Regression equation}
+	\begin{itemize}
+		\item $\hat{y}=ax+b$
+		\item $a=\dfrac{S_{\mathrm{xy}}}{S_{\mathrm{xx}}}=\dfrac{\sum (x_i-\overline{x}) (y_i-\overline{y})}{\sum (x_i-\overline{x})^2}$
+		\item $b=\overline{y}-a\overline{x}$
+	\end{itemize}
+	
+	\subsubsection{PMCC}
+	\begin{itemize}
+		\item Measures the strength of \textbf{linear} correlation
+		\item  $r =\dfrac{\sum\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)}{\sqrt{\sum\left(x_{i}-\bar{x}\right)^{2} \sum\left(y_{i}-\bar{y}\right)^{2}}}$
+	\end{itemize}
 	
 	\subsection{Interpreting distributions}
 	\begin{description}
 		\item[Measuring central tendency:] Mean / median / mode
-		\item[Measuring variation:] Variance / standard deviation / range / interpercentile ranges
+		\item[Measuring spread of data:] Variance / standard deviation / range / interpercentile ranges
 	
 	\end{description}
 	
 	\subsubsection{Standard deviation / variance}
-	$S_{xx}=\Sigma (x-\overline{x})^2=\Sigma x^2 - \dfrac{(\Sigma x)^2}{n}$\\
-	$Var(x)=E(x^2)-(E(x))^2=E((x- E(x) )^2)$\\
-	$\sigma=\sqrt{\dfrac{S_{xx}}{n}}=\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
+	\begin{itemize}
+		\item $S_{xx}=\Sigma (x-\overline{x})^2=\Sigma x^2 - \dfrac{(\Sigma x)^2}{n}$
+		\item $Var(x)=E(x^2)-(E(x))^2=E((x- E(x) )^2)$
+		\item $\sigma=\sqrt{\dfrac{S_{xx}}{n}}=\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
+	\end{itemize}
 	
 	\subsubsection{Sample variance}
-	$S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
+	\begin{itemize}
+		\item $S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
+	\end{itemize}
+
 	
 	\subsection{Transform to linear regression}
 	\subsubsection{Exponential}
@@ -249,9 +280,7 @@
 		\hline
 	\end{tabular}
 	
-	
-	\pagebreak
-	
+
 
 	
 	\section{Statistical distributions}
@@ -296,7 +325,6 @@
 		\item Approximately 68\% of data lies within 1 s.d. from mean, 95\% within 2 s.d., 99.7\% (nearly all) within 3 s.d.
 	\end{itemize}
 	
-	\pagebreak
 	
 	\section{Hypothesis testing}
 	\subsection{Definitions}

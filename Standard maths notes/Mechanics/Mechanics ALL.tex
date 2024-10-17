@@ -1,4 +1,4 @@
-\documentclass[A4paper]{article}
+\documentclass[A4paper, 11pt]{article}
 \usepackage[a4paper, total={7.2in, 10.5in}]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -17,7 +17,8 @@
 \setlength{\parindent}{0pt}
 
 \title{A Level Mathematics - Mechanics}
-\author{Xingzhi Lu (2129570@concordcollege.org.uk)}
+\author{Xingzhi Lu}
+\date{For exam in 2025}
 
 \usepackage{mathptmx}
 
@@ -152,11 +153,14 @@
 	\end{itemize}
 	\subsection{Types of forces}
 	\begin{description}
-		\item[Weight: ] $W=mg$
-		\item[Normal contact force: ] symbol = $R$ or $N$
-		\item[Static friction: ] Depends on driving force, $F\leq \mu R$
-		\item[Dynamic friction: ] $f=\mu R$ ($\mu$=coefficient of kinetic friction)
-		\item[Tension: ] $T=\text{elastic coefficient}\times\text{extension}=k\times\Delta x$
+		\item[Weight:] $W=mg$
+		\item[Normal contact force:] symbol = $R$ or $N$
+		\item[Static friction:] Depends on driving force, $F\leq \mu R$
+		\item[Dynamic friction:] $f=\mu R$ ($\mu$=coefficient of kinetic friction), exists on \textbf{rough surfaces}
+		\item[Thrust / compression:] Object being pushed along using a light rod
+		\item[Tension:] $T=\text{elastic coefficient}\times\text{extension}=k\times\Delta x$
+		\item[Air resistance / drag:] resistance due to air / water / fluid
+		\item[Driving / propulsive force:] forward force produced by the object itself
 	\end{description}
 	
 	\subsection{Common scenarios}
@@ -169,7 +173,7 @@
 	
 	\subsubsection{Slope}
 	\begin{itemize}
-		\item Coordinate: centre = object, x-axis = slope surface, y-axis = perpendicular to slope surface
+		\item Coordinate system: centre = object, x-axis = slope surface, y-axis = perpendicular to slope surface
 		\item Calculate resultant force in $x$ and $y$ direction
 		\item Use SUVAT equations to find distance / speed / time
 	\end{itemize}
@@ -187,6 +191,7 @@
 		\item Same tension
 		\item Same magnitude for acceleration (different direction)
 		\item Use simultaneous equations to find tension
+		\item $\text{Force on pulley} = 2 \times \text{tension}$
 	\end{itemize}
 	
 
@@ -222,11 +227,11 @@
 
 	\section{Modelling}
 	\subsection{Assumptions}
-	\begin{tabular}{|m{3.5cm} | m{13.5cm}|}
+	\begin{tabular}{|m{3.9cm} | m{13.5cm}|}
 		\hline
 		\textbf{Model} & \textbf{Assumptions} \\
 		\hline
-		Particle & Mass of the object is concentrated at a single point, rotational forces and air resistance can be ignored, volume is negligible \\
+		Particle & Mass of the object is concentrated at a single point, rotational effect of external forces and air resistance can be ignored, volume is negligible \\
 		\hline
 		Rod & Mass is concentrated along a line, no thickness, rigid \\
 		\hline
@@ -236,7 +241,7 @@
 		\hline
 		Light object & Treat the object as if it has zero mass, tension is the same at both ends of the string  \\
 		\hline
-		Inextensible string & Acceleration is the same in objects connected \\
+		Inextensible string & Tension is the same at any point on the string, any stretching effect can be ignored \\
 		\hline
 		Smooth surface & No friction between the surface and other objects\\
 		\hline
