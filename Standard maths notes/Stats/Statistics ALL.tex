@@ -8,12 +8,13 @@
 \usepackage{pgfplots}
 \graphicspath{ {./images/} }
 \usepackage{bookmark}
-\setcounter{tocdepth}{3}
+%\setcounter{tocdepth}{3}
+\usepackage{tabularx}
 \DeclareMathOperator\cosec{cosec}
 
 \title{A Level Mathematics - Statistics}
 \author{Xingzhi Lu}
-\date{For exam in 2025}
+\date{For exams in 2025}
 
 \usepackage{mathptmx}
 
@@ -168,6 +169,8 @@
 		\item Highly dependent on individual researcher
 	\end{itemize}
 	
+	\pagebreak
+	
 	\section{Data presentation and interpretation}
 	\subsection{Types of data}
 	\begin{description}
@@ -230,33 +233,93 @@
 		\item x-axis = $\ln x$, y-axis = $y$, gradient = $a$
 	\end{itemize}
 	
+	\pagebreak
 	
-	\subsection{Large data set}
-	\subsubsection{Scope}
+	\section{Large data set}
+	\subsection{Scope}
 	\begin{itemize}
 		\item Months included: May - October
 		\item Years included: 2015 and 1987
 	\end{itemize}
+	\subsection{Background information}
 	\subsubsection{Cities}
 	\includegraphics{LDSmap}\\
-	Ordered from north to south:
-	\begin{enumerate}
-		\item Leuchars
-		\item Leeming
-		\item Heathrow
-		\item Hurn
-		\item Camborne
-		\item Beijing
-		\item Jacksonville
-		\item Perth (Southern hemisphere)
-	\end{enumerate}
+	\begin{tabular}{|p{2cm}|p{15cm}|}
+		\hline
+		\textbf{City} & \textbf{Info} \\
+		\hline
+		Leuchars & Coastal \newline NE of Scotland \newline The north most city \newline Climate generally warm and temperate, significant rainfall throughout the year\\
+		\hline
+		Leeming & \textbf{Inland} \newline Climate generally warm and temperate, significant rainfall throughout the year\\
+		\hline
+		Heathrow  & \textbf{Inland} \newline Temperate oceanic climate \newline Cool to warm summers, cold winters\\
+		\hline
+		Hurn  & Coastal \newline Southern England \newline Climate mild with warm summers \newline \textbf{Heavy rainfall} often in \textbf{mild} winters\\
+		\hline
+		Camborne & Coastal \newline Cornwall (SW England) \newline Climate generally warm and temperate \newline \textbf{High rainfall} even in driest months\\
+		\hline
+		Beijing  & \textbf{Inland} (150km from the sea) \newline Northern hemisphere but relatively far South, so it tends to be \textbf{hot and humid} in summer months\\
+		\hline
+		Jacksonville  & Coastal \newline Northern hemisphere but relatively far South, so it tends to be \textbf{hot and humid} in summer months \\
+		\hline
+		Perth & Coastal \newline In the \textbf{southern hemisphere} - in winter during May - Oct\\
+		\hline
+	\end{tabular}
 	
-	\subsubsection{Data recorded}
-	\begin{tabular}{|c|c|c|c|c|c|}
+	\subsubsection{Weather incidents}
+	\begin{description}
+		\item[1987:] ``Great storm" in UK in October so there are unusually high winds, mild ``El Nino" impact globally
+		\item[2015:] Strong ``El Nino" impact espacially in the US so there is cooler temperature and higher rainfall
+	\end{description}
+	
+	\subsection{Data recorded}
+	\subsubsection{Definitions}
+	\begin{tabular}{|p{5.5cm}|p{11.5cm}|}
+		\hline
+		\textbf{Variable} & \textbf{Unit} \\
+		\hline
+		Daily mean temperature & The average of the hourly temperature (\textcelsius) readings, 09:00 – 09:00 GMT \newline A reading which is not available is listed as ‘n/a’.
+		 \\
+		\hline
+		Daily total rainfall & Daily total precipitation (mm) 09:00 – 09:00 GMT
+		(includes snow or hail, which is melted and measured in the same way as rainfall.)
+		‘Trace’ (tr) is less than 0.05 mm. \newline A reading which is not available will be shown by ‘n/a’
+		 \\
+		\hline
+		Daily total sunshine & Sunshine amounts are recorded in hours and tenths and show the amount of bright sunshine recorded on the day of entry. \newline A reading which is not available will be shown by ‘n/a’ \\
+		\hline
+		Daily maximum relative humidity & A measure of how close the air is to being saturated with water vapour. \newline Relative humidities above 95\% are associated with mist and fog. \newline A reading which is not available will be shown by ‘n/a’
+		 \\
+		\hline
+		Daily mean wind direction & The daily mean wind direction (coming from, clockwise from North) is averaged and rounded to the nearest 10\textdegree \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Readings which are not available are listed as ‘n/a’.
+		  \\
+		\hline
+		Daily mean windspeed & Daily average windspeed \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Readings which are not available are listed as ‘n/a’. \\
+		\hline
+		Daily maximum gust & Maximum instantaneous wind speed \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Readings which are not available are listed as ‘n/a’.  \\
+		\hline
+		Daily maximum gust direction & The direction from which the wind was blowing when the maximum gust during the hour commencing at the time of entry occurred, and is measured in degrees from true north. \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Readings which are not available are listed as ‘n/a’.  \\
+		\hline
+		Daily mean cloud cover & Measured in eights (oktas)   \\
+		\hline
+		Daily mean visibility & The greatest distance at which an object can be seen and recognized in daylight, or at night could be seen and recognized if the general illumination were raised to daylight level. 
+		\newline Visibility is measured horizontally, in decametres (Dm) dam = 10m \newline A dash (-) indicates data not available.
+		 \\
+		\hline
+		Daily mean pressure & Mean sea level pressure, calculated from a measurement made at station level. \newline Measured in hectopascals (hPa) 	where 1 hPa = 1 millibar
+		  \\
+		\hline
+	\end{tabular}
+	\subsubsection{Unit and precision}
+	\begin{tabular}{|l|l|l|}
 		\hline
 		\textbf{Variable} & \textbf{Unit} & \textbf{Precision}\\
 		\hline
-		Daily mean temperature & Celsius & to 1 dp\\
+		Daily mean temperature & \textcelsius & to 1 dp\\
 		\hline
 		Daily total rainfall & mm & to 1 dp (tr = less than 0.05 mm, treat as 0)\\
 		\hline
@@ -279,9 +342,57 @@
 		Daily mean pressure & hectopascals (hPa) & nearest integer  \\
 		\hline
 	\end{tabular}
+	%* Wind direction is defined as the direction where the wind \textbf{comes from}
 	
-
-
+	\subsubsection{Typical values for temperature and wind speed}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Location} & \textbf{Temperature range (\textcelsius)}& \textbf{Wind speed range (knots)} \\
+		\hline
+		Camborne & 10-20 & 3-18 \\
+		\hline
+		Heathrow & 8-29 & 3-19 \\
+		\hline
+		Hurn & 6-24 & 2-19 \\
+		\hline
+		Leeming & 4-23 & 3-17 \\
+		\hline
+		Leuchars & 4-19 & 3-23 \\
+		\hline
+		Beijing & 8-33 & 2-9 \\
+		\hline
+		Jacksonville & 15-31 & 1-12 \\
+		\hline
+		Perth & 8-25 & 4-14 \\
+		\hline
+	\end{tabular}
+	
+	\subsubsection{Typical values for other data}
+	\begin{tabular}{|p{4.8cm} | p{12.2cm}|}
+		\hline
+		\textbf{Variable} & \textbf{Typical values} \\
+		\hline
+		Gust & 20 kn \\
+		\hline
+		Rainfall & 0-60 mm in the UK, more extreme maximums elsewhere (e.g. 102mm in Perth) \\
+		\hline
+		Pressure & 988-1038 Pa \\
+		\hline
+		Wind speed on Beaufort Scale & Mostly light / moderate. Maximum is fresh (5) \\
+		\hline
+		Sunshine & 0-16 hours \\
+		\hline
+		Cloud cover & 0-8 oktas \\
+		\hline
+	\end{tabular}
+	
+	\subsection{Cleaning data}
+	\begin{description}
+		\item[tr:] Need to be replaced with a number between $0$ and $0.05$ ($0.25$) before processing data
+		\item[n/a:] Problem = data isn't available, usually ignored when doing calculations
+	\end{description}
+	
+	\pagebreak
 	
 	\section{Statistical distributions}
 	\subsection{Binomial distribution}
@@ -297,14 +408,14 @@
 		\item The trials are independent of each other
 	\end{itemize}
 	\subsubsection{Approximation of binomial distribution}
-	If $n$ is large ($n\geq35$) and $p$ is close to $0.5$, then $X \sim N(np, np(1-p))$\\
+	If $n$ is large ($n\geq35$) and $p$ is close to $0.5$, then $X \sim B(n,p)$ can be modelled as $Y \sim N(np, np(1-p))$\\
 	When estimating probability $(n\in \textbf{N})$:
 	\begin{itemize}
-		\item $\text{P}(X>n)\approx \text{P}(X>[n+0.5])$
-		\item $\text{P}(X\geq n)\approx \text{P}(X\geq [n-0.5])$
-		\item $\text{P}(X=n)\approx \text{P}([n-0.5]<X<[n+0.5])$
-		\item $\text{P}(X<n)\approx \text{P}(X<[n-0.5])$
-		\item $\text{P}(X \leq n)\approx \text{P}(X\leq [n+0.5])$
+		\item $\text{P}(X>n)\approx \text{P}(Y>[n+0.5])$
+		\item $\text{P}(X\geq n)\approx \text{P}(Y\geq [n-0.5])$
+		\item $\text{P}(X=n)\approx \text{P}([n-0.5]<Y<[n+0.5])$
+		\item $\text{P}(X<n)\approx \text{P}(Y<[n-0.5])$
+		\item $\text{P}(X \leq n)\approx \text{P}(Y\leq [n+0.5])$
 	\end{itemize}
 	
 	\subsection{Normal distribution}
@@ -324,6 +435,8 @@
 		\item Has points of inflection at $\mu+\sigma$ and $\mu-\sigma$
 		\item Approximately 68\% of data lies within 1 s.d. from mean, 95\% within 2 s.d., 99.7\% (nearly all) within 3 s.d.
 	\end{itemize}
+	
+	\pagebreak
 	
 	
 	\section{Hypothesis testing}
