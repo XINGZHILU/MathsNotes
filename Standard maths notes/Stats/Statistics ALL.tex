@@ -172,6 +172,8 @@
 	\pagebreak
 	
 	\section{Data presentation and interpretation}
+	\subsection{Types of means}
+	
 	\subsection{Types of data}
 	\begin{description}
 		\item[Quantitative data:] Associated with numerical observations
@@ -181,18 +183,18 @@
 	\end{description}
 	
 	\subsection{Linear regression}
-	* Work these out using a calculator in exams
+	* Work these out using a \textbf{calculator} in exams
 	\subsubsection{Regression equation}
 	\begin{itemize}
 		\item $\hat{y}=ax+b$
-		\item $a=\dfrac{S_{\mathrm{xy}}}{S_{\mathrm{xx}}}=\dfrac{\sum (x_i-\overline{x}) (y_i-\overline{y})}{\sum (x_i-\overline{x})^2}$
+		\item $a=\dfrac{\sum (x_i-\overline{x}) (y_i-\overline{y})}{\sum (x_i-\overline{x})^2}$ \textbf{(not needed for the exam)}
 		\item $b=\overline{y}-a\overline{x}$
 	\end{itemize}
 	
 	\subsubsection{PMCC}
 	\begin{itemize}
 		\item Measures the strength of \textbf{linear} correlation
-		\item  $r =\dfrac{\sum\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)}{\sqrt{\sum\left(x_{i}-\bar{x}\right)^{2} \sum\left(y_{i}-\bar{y}\right)^{2}}}$
+		\item $r =\dfrac{\sum\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)}{\sqrt{\sum\left(x_{i}-\bar{x}\right)^{2} \sum\left(y_{i}-\bar{y}\right)^{2}}}$ \textbf{(not needed for the exam)}
 	\end{itemize}
 	
 	\subsection{Interpreting distributions}
@@ -203,16 +205,16 @@
 	\end{description}
 	
 	\subsubsection{Standard deviation / variance}
-	\begin{itemize}
-		\item $S_{xx}=\Sigma (x-\overline{x})^2=\Sigma x^2 - \dfrac{(\Sigma x)^2}{n}$
-		\item $Var(x)=E(x^2)-(E(x))^2=E((x- E(x) )^2)$
-		\item $\sigma=\sqrt{\dfrac{S_{xx}}{n}}=\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
-	\end{itemize}
+	\begin{description}
+		%\item $S_{xx}=\Sigma (x-\overline{x})^2=\Sigma x^2 - \dfrac{(\Sigma x)^2}{n}$
+		\item[Variance:] $\mathrm{Var}(x)=\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2$
+		\item[Standard deviation:] $\sigma=\sqrt{\mathrm{Var}(x)}\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
+	\end{description}
 	
-	\subsubsection{Sample variance}
-	\begin{itemize}
-		\item $S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
-	\end{itemize}
+	%\subsubsection{Sample variance}
+	%\begin{itemize}
+	%	\item $S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
+	%\end{itemize}
 
 	
 	\subsection{Transform to linear regression}
@@ -246,7 +248,7 @@
 	\includegraphics{LDSmap}\\
 	\begin{tabular}{|p{2cm}|p{15cm}|}
 		\hline
-		\textbf{City} & \textbf{Info} \\
+		\textbf{City} & \textbf{Climate and geographical locations} \\
 		\hline
 		Leuchars & Coastal \newline NE of Scotland \newline The north most city \newline Climate generally warm and temperate, significant rainfall throughout the year\\
 		\hline
@@ -291,7 +293,7 @@
 		Daily maximum relative humidity & A measure of how close the air is to being saturated with water vapour. \newline Relative humidities above 95\% are associated with mist and fog. \newline A reading which is not available will be shown by ‘n/a’
 		 \\
 		\hline
-		Daily mean wind direction & The daily mean wind direction (coming from, clockwise from North) is averaged and rounded to the nearest 10\textdegree \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Daily mean wind direction & The daily mean wind direction the wind is \textbf{coming from}, (clockwise from North) is averaged and rounded to the nearest 10\textdegree \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
 		Readings which are not available are listed as ‘n/a’.
 		  \\
 		\hline
@@ -388,7 +390,7 @@
 	
 	\subsection{Cleaning data}
 	\begin{description}
-		\item[tr:] Need to be replaced with a number between $0$ and $0.05$ ($0.25$) before processing data
+		\item[tr:] Needs to be replaced with a number between $0$ and $0.05$ ($0.25$) before processing data
 		\item[n/a:] Problem = data isn't available, usually ignored when doing calculations
 	\end{description}
 	
@@ -409,13 +411,13 @@
 	\end{itemize}
 	\subsubsection{Approximation of binomial distribution}
 	If $n$ is large ($n\geq35$) and $p$ is close to $0.5$, then $X \sim B(n,p)$ can be modelled as $Y \sim N(np, np(1-p))$\\
-	When estimating probability $(n\in \textbf{N})$:
+	When estimating probability $(0\leq a \leq n, \: a \in \textbf{N})$:
 	\begin{itemize}
-		\item $\text{P}(X>n)\approx \text{P}(Y>[n+0.5])$
-		\item $\text{P}(X\geq n)\approx \text{P}(Y\geq [n-0.5])$
-		\item $\text{P}(X=n)\approx \text{P}([n-0.5]<Y<[n+0.5])$
-		\item $\text{P}(X<n)\approx \text{P}(Y<[n-0.5])$
-		\item $\text{P}(X \leq n)\approx \text{P}(Y\leq [n+0.5])$
+		\item $\text{P}(X>a)\approx \text{P}(Y>[a+0.5])$
+		\item $\text{P}(X\geq a)\approx \text{P}(Y\geq [a-0.5])$
+		\item $\text{P}(X=a)\approx \text{P}([a-0.5]<Y<[a+0.5])$
+		\item $\text{P}(X<a)\approx \text{P}(Y<[a-0.5])$
+		\item $\text{P}(X \leq a)\approx \text{P}(Y\leq [a+0.5])$
 	\end{itemize}
 	
 	\subsection{Normal distribution}
@@ -444,44 +446,37 @@
 	\begin{description}
 		\item[Null hypothesis $H_0$:] $\theta=\theta_0$
 		\item[Alternative hypothesis $H_1$:] $\theta \neq \theta_0$ / $\theta>\theta_0$ (right tail) / $\theta<\theta_0$ (left tail)
-		\item[Significance level:] Probability of rejecting $H_0$ when assuming $H_0$ is true
+		\item[Significance level ($\alpha$):] Probability of rejecting $H_0$ when assuming $H_0$ is true
 	\end{description}
+	
 	\subsection{Test on proportion / probability of success if binomial: $B(n,p)$}
+	$t^*$ = test statistics
 	\subsubsection{By critical value}
-	If stats test $t^* > \text{cv}$: reject $H_0$\\
-	Else if stats test $t^* < \text{cv}$: accept $H_0$
+	\begin{itemize}
+		\item One tailed: if stats test $t^* > \text{cv}$ or $t^* < \text{cv}$ (depends on right / left tail): reject $H_0$, else accept $H_0$
+		\item Two tailed: if stats test $t^* > \text{upper cv}$ or $t^* < \text{lower cv}$: reject $H_0$, else accept $H_0$ (For 2 tailed tests the probability used for calculating cv at the end of each tail = $\dfrac{\alpha}{2}$)
+	\end{itemize}
+	
 	
 	\subsubsection{By $p$ value}
-	If $P(t\geq t^*) < \alpha$: reject $H_0$\\
-	Else if $P(t \geq t^*) > \alpha$: accept $H_0$
+	\begin{itemize}
+		\item One tailed: if $P(t\geq t^*) < \alpha$: reject $H_0$, else accept $H_0$
+		\item Two tailed: if $P(t\geq t^*) < \dfrac{\alpha}{2}$ or $P(t\leq t^*) > \dfrac{\alpha}{2}$: reject $H_0$, else accept $H_0$
+	\end{itemize}
 	
-	\subsubsection{Test population mean with unknown s.d.}
-	$n>35$: CLM, see below\\
-	$n<35$: t-test, see below
-	
-	\subsection{Probability calculation}
-	If $n$ is large enough ($n\geq35$), then sample mean $\overline{x}$ is normally distributed: $\overline{x} \sim N(M_{\overline{x}}, \sigma_{\overline{x}}^2)$ (Central limit theorem)
+	\subsection{Central limit theorem}
+	If $n$ is large enough ($n\geq35$), then sample mean $\overline{x}$ is normally distributed: $\overline{x} \sim N(M_{\overline{x}}, \sigma_{\overline{x}}^2)$
 	\begin{itemize}
 		\item $M_{\overline{x}}=M$
 		\item $\sigma_{\overline{x}}^2=\dfrac{1}{n}\sigma^2 \rightarrow \sigma_{\overline{x}} = \dfrac{\sigma}{\sqrt{n}}$
 	\end{itemize}
-	If $n\geq35$, sample proportion $\hat{p}$ with an attribute is normally distributed: $\hat{p}\sim N(M_{\hat{p}}, \sigma_{\hat{p}}^2)$
-	\begin{itemize}
-		\item $M_{\hat{p}}=p$ (mean of $\hat{p}$ is population proportion $p$)
-		\item $\sigma_{\hat{p}}^2=\dfrac{p(1-p)}{n}$
-	\end{itemize}
-	t-test: if sample size $n<35$, $\overline{x} \sim t(M, (\dfrac{S}{\sqrt{n}})^2)$, degree of freedom = $n-1$
-	\begin{itemize}
-		\item $S=\sqrt{\dfrac{\Sigma (x_i-\overline{x})^2}{n-1}}$
-		\item t-test stats = $\dfrac{\overline{x}-M}{\dfrac{S}{\sqrt{n}}}$
-		\item If t-test stats $>$ critical value (check on data sheet) then reject $H_0$
-	\end{itemize}
 	
-	\subsection{Hypothesis test for zero correlation}
+	\subsection{Hypothesis test for zero linear correlation}
 	\begin{itemize}
 		\item $H_0$: $\rho = 0$
-		\item $H_1$: $\rho \neq 0$
+		\item $H_1$: $\rho \neq 0$ (two tailed) / $\rho > 0$ (right tail) / $\rho < 0$ (left tail)
 		\item Check the data sheet for cv
+		\item Work out $r$ value of sample using linear regression on calculator
 		\item Sample $r >$ cv = reject $H_0$, else: not reject $H_0$
 	\end{itemize}
 	
