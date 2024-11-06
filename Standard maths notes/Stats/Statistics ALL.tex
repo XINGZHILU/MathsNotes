@@ -25,11 +25,11 @@
 	\subsection{Populations and samples}
 	\subsubsection{Definitions}
 	\begin{description}
-		\item[Population:] The whole set of items that are of interest
-		\item[Census:] Observes or measures every member of a population
-		\item[Sample:] A selection of observations taken from a subset of the population which is used
-		\item[Sampling unit:] Individual units of a population that cam be sampled
-		\item[Sampling frame:] A list of all people or item that can potentially be involved in the sample
+		\item[Population] The whole set of items that are of interest
+		\item[Census] Observes or measures every member of a population
+		\item[Sample] A selection of observations taken from a subset of the population which is used
+		\item[Sampling unit] Individual units of a population that cam be sampled
+		\item[Sampling frame] A list of all people or item that can potentially be involved in the sample
 	\end{description}
 	
 	\subsubsection{Census}
@@ -97,6 +97,7 @@
 		\item Required elements are chosen at regular intervals i.e. take every $k$th elements where $k=\dfrac{\text{Population size}}{\text{Sample size}}$
 		\item Starting at random item between 1 and $k$ using a random number generator
 		\item Select the remaining data at the chosen interval
+		\item[*] \textbf{Show working}
 	\end{enumerate}
 	\textbf{Advantages}
 	\begin{itemize}
@@ -116,7 +117,7 @@
 	\textbf{Method}
 	\begin{enumerate}
 		\item Population divided into \textbf{non-overlapping} groups / strata
-		\item Same proportion ($\dfrac{\text{Sample size}}{\text{Population size}}$) sampled from each strata (work out the total population and the size of each strata individually, round if needed)
+		\item Same proportion ($\dfrac{\text{Sample size}}{\text{Population size}}$) sampled from each strata (\textbf{show working} for the total population and the size of each strata individually, round if needed)
 		\item Simple random sampling carried out in each group (explain in more details here)
 	\end{enumerate}
 	\textbf{Advantages}
@@ -136,7 +137,9 @@
 		\item Population divided into groups according to a given characteristic
 		\item A quota group is set to try and reflect the group's proportion in the whole population
 		\item An interviewer or researcher selects a sample that reflects the characteristics of the whole population (opportunity sampling)
+		\item[*] \textbf{Show working}
 	\end{enumerate}
+	
 	\textbf{Advantages}
 	\begin{itemize}
 		\item Allows a small sample to still be representative of the population
@@ -173,13 +176,18 @@
 	
 	\section{Data presentation and interpretation}
 	\subsection{Types of means}
+	\begin{description}
+		\item[Mean] $\overline{x}=\dfrac{\sum x}{n}$
+		\item[Median] The middle value when the data values are put in order
+		\item[Mode / modal class] The value or class that occurs most often
+	\end{description}
 	
 	\subsection{Types of data}
 	\begin{description}
-		\item[Quantitative data:] Associated with numerical observations
-		\item[Qualitative data:] Associated with non-numerical observations
-		\item[Continuous data:] Can take any value in a given range
-		\item[Discrete data:] Can only take specific values in a given range
+		\item[Quantitative data] Associated with numerical observations
+		\item[Qualitative data] Associated with non-numerical observations
+		\item[Continuous data] Can take any value in a given range
+		\item[Discrete data] Can only take specific values in a given range
 	\end{description}
 	
 	\subsection{Linear regression}
@@ -199,25 +207,29 @@
 	
 	\subsection{Interpreting distributions}
 	\begin{description}
-		\item[Measuring central tendency:] Mean / median / mode
-		\item[Measuring spread of data:] Variance / standard deviation / range / interpercentile ranges
-	
+		\item[Measuring central tendency] Mean / median / mode
+		\item[Measuring spread of data] Variance / standard deviation / range / interpercentile ranges
 	\end{description}
 	
 	\subsubsection{Standard deviation / variance}
 	\begin{description}
 		%\item $S_{xx}=\Sigma (x-\overline{x})^2=\Sigma x^2 - \dfrac{(\Sigma x)^2}{n}$
-		\item[Variance:] $\mathrm{Var}(x)=\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2$
-		\item[Standard deviation:] $\sigma=\sqrt{\mathrm{Var}(x)}\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
+		\item[Variance] $\mathrm{Var}(x)=\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2$
+		\item[Standard deviation] $\sigma=\sqrt{\mathrm{Var}(x)}=\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
 	\end{description}
 	
 	%\subsubsection{Sample variance}
 	%\begin{itemize}
 	%	\item $S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
 	%\end{itemize}
-
 	
-	\subsection{Transform to linear regression}
+	\subsubsection{Comparing spread of data}
+	\begin{description}
+		\item[Centeral tendency] A has a higher \dots than B on average as the mean / median value is higher
+		\item[Spread] A has a higher IQR / standard deviation than B so there is more variation in the \dots of A than B
+	\end{description}
+	
+	\subsection{Transforming to linear regression}
 	\subsubsection{Exponential}
 	\begin{itemize}
 		\item $y=ab^x\rightarrow\ln y = x\ln b + \ln a$
@@ -270,8 +282,8 @@
 	
 	\subsubsection{Weather incidents}
 	\begin{description}
-		\item[1987:] ``Great storm" in UK in October so there are unusually high winds, mild ``El Nino" impact globally
-		\item[2015:] Strong ``El Nino" impact espacially in the US so there is cooler temperature and higher rainfall
+		\item[1987] ``Great storm" in UK in October so there are unusually high winds, mild ``El Nino" impact globally
+		\item[2015] Strong ``El Nino" impact espacially in the US so there is cooler temperature and higher rainfall
 	\end{description}
 	
 	\subsection{Data recorded}
@@ -390,8 +402,8 @@
 	
 	\subsection{Cleaning data}
 	\begin{description}
-		\item[tr:] Needs to be replaced with a number between $0$ and $0.05$ ($0.25$) before processing data
-		\item[n/a:] Problem = data isn't available, usually ignored when doing calculations
+		\item[tr] Needs to be replaced with a number between $0$ and $0.05$ ($0.25$) before processing data
+		\item[n/a] Problem = data isn't available, usually ignored when doing calculations
 	\end{description}
 	
 	\pagebreak
@@ -444,9 +456,9 @@
 	\section{Hypothesis testing}
 	\subsection{Definitions}
 	\begin{description}
-		\item[Null hypothesis $H_0$:] $\theta=\theta_0$
-		\item[Alternative hypothesis $H_1$:] $\theta \neq \theta_0$ / $\theta>\theta_0$ (right tail) / $\theta<\theta_0$ (left tail)
-		\item[Significance level ($\alpha$):] Probability of rejecting $H_0$ when assuming $H_0$ is true
+		\item[Null hypothesis $H_0$] $\theta=\theta_0$
+		\item[Alternative hypothesis $H_1$] $\theta \neq \theta_0$ / $\theta>\theta_0$ (right tail) / $\theta<\theta_0$ (left tail)
+		\item[Significance level ($\alpha$)] Probability of rejecting $H_0$ when assuming $H_0$ is true
 	\end{description}
 	
 	\subsection{Test on proportion / probability of success if binomial: $B(n,p)$}
