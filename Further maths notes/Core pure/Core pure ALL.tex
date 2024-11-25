@@ -1,20 +1,22 @@
-\documentclass[fleqn, 11pt]{article}
-\usepackage[a4paper, total={7.2in, 10.5in}]{geometry}
+\documentclass[oneside,fleqn,11pt]{book}
+\usepackage[a4paper, total={7.2in, 10.3in}]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\DeclareMathOperator\du{d}
 \DeclareMathOperator\cis{cis}
 \DeclareMathOperator\sech{sech}
 \DeclareMathOperator\csch{csch}
 \usepackage{pgfplots}
 \graphicspath{ {./images/} }
 \usepackage{bookmark}
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{0}
 \usepackage{import}
 \usepackage{mathtools}
-\usepackage{mathptmx}
+
+
 
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \hypersetup{
@@ -36,35 +38,206 @@
 \author{Xingzhi Lu}
 \date{For exams in 2026}
 
+% math font
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+%\usepackage{arev}
+
+% color
+\usepackage[table]{xcolor}
+
+\usepackage[many]{tcolorbox}
+\usepackage{pifont}
+\usepackage{hyperref}
+\hypersetup{%
+	linktoc=all,%
+	bookmarksnumbered,%
+	bookmarksopen,%
+	hidelinks}
+\usepackage{bookmark}
+\bookmarksetup{
+	addtohook={%
+		\ifnum\bookmarkget{level}=0%
+		\bookmarksetup{color=red}%
+		\fi%
+		\ifnum\bookmarkget{level}=1%
+		\bookmarksetup{color=blue}%
+		\fi%
+		\ifnum\bookmarkget{level}=2%
+		\bookmarksetup{color=teal}%
+		\fi}}
+% enumerate
+\usepackage[inline]{enumitem}
+\usepackage{multicol}
+\usepackage[inline]{enumitem}
+\usepackage{tasks}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cancel}
+
+\renewcommand\rmdefault{ptm}
+\renewcommand\sfdefault{ptm}
+
+\tcbset{
+	colframe=magenta,
+	colback=magenta!12!white,
+	boxed title style={colback=magenta},
+	breakable,
+	enhanced,
+	sharp corners,
+	boxsep=1pt,
+	attach boxed title to top left={yshift=-\tcboxedtitleheight,  yshifttext=-.75\baselineskip},
+	boxed title style={boxsep=1pt,sharp corners},
+	fonttitle=\bfseries\sffamily,
+	drop lifted shadow
+}
+\newtcolorbox{solution}[1][]{
+	no shadow,
+	top=2ex,
+	boxrule=0pt,
+	leftrule=1.4pt,
+	title={Solution},
+	colframe=green!79!blue,
+	colback=green!12!white,
+	boxed title style={colback=green!79!blue},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=magenta,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{activity}[1][]{
+	title={Activity~\thetcbcounter},
+	colframe=green,
+	colback=green!22!white,
+	coltitle=black,
+	boxed title style={colback=green},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=green,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{definition}[1][]{
+	title={Definition~\thetcbcounter},
+	colframe=blue,
+	colback=blue!12!white,
+	boxed title style={colback=blue},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=blue,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{theorem}[1][]{
+	title={Theorem~\thetcbcounter},
+	colframe=violet,
+	colback=violet!12!white,
+	fontupper=\itshape,
+	boxed title style={colback=violet},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=violet,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{example}[1][]{
+	title={Example~\thetcbcounter},
+	colframe=magenta,
+	colback=magenta!12!white,
+	boxed title style={colback=magenta},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=magenta,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{exercise}[1][]{
+	title={Exercise~\thetcbcounter},
+	colframe=red,
+	colback=red!12!white,
+	boxed title style={colback=red},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=red,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{generality}[1][]{
+	title={Generality~\thetcbcounter},
+	colframe=teal,
+	colback=teal!12!white,
+	boxed title style={colback=teal},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=teal,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox[auto counter,number within=chapter,number format=\arabic]{property}[1][]{
+	title={Property~\thetcbcounter},
+	colframe=teal,
+	colback=teal!12!white,
+	boxed title style={colback=teal},
+	overlay unbroken and first={
+		\node[below right,font=\small,color=teal,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox{remark}[1][]{
+	title={\scalebox{1.75}{\raisebox{-.25ex}{\ding{43}}}~Remark},
+	colframe=yellow!45!white,
+	colback=yellow!45!white,
+	coltitle=violet,
+	fontupper=\sffamily,
+	boxed title style={colback=yellow!45!white},
+	boxed title style={boxsep=1ex,sharp corners},%%
+	overlay unbroken and first={
+		\node[below right,font=\normalsize,color=red,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+\newtcolorbox{note}[1][]{
+	title={\scalebox{1.75}{\raisebox{-0.25ex}{\ding{45}}}~Note},
+	colframe=yellow!45!white,
+	colback=yellow!45!white,
+	coltitle=violet,
+	fonttitle=\bfseries\sffamily,
+	fontupper=\sffamily,
+	boxed title style={colback=yellow!45!white},
+	boxed title style={boxsep=1ex,sharp corners},%%
+	overlay unbroken and first={
+		\node[below right,font=\normalsize,color=red,text width=.8\linewidth]
+		at (title.north east) {#1};
+	}
+}
+
+
+
 \begin{document}
 	\maketitle
 	\tableofcontents
 	\pagebreak
-	\section{Proof} %finished
+	\chapter{Proof} %finished
 	\input{chapters/1.tex} \pagebreak
 	
-	\section{Complex numbers} %finished
+	\chapter{Complex numbers} %finished
 	\input{chapters/2.tex} \pagebreak
 	
-	\section{Matrices} %almost finished
+	\chapter{Matrices} %finished
 	\input{chapters/3.tex} \pagebreak
 	
-	\section{Further algebra and functions} %finished
+	\chapter{Further algebra and functions} %finished
 	\input{chapters/4.tex} \pagebreak
 	
-	\section{Further calculus}
+	\chapter{Further calculus}
 	\input{chapters/5.tex} \pagebreak
 	
-	\section{Further vectors} %finished
+	\chapter{Further vectors} %finished
 	\input{chapters/6.tex} \pagebreak
 	
-	\section{Polar coordinates} %finished
+	\chapter{Polar coordinates} %finished
 	\input{chapters/7.tex} \pagebreak
 	
-	\section{Hyperbolic functions}
+	\chapter{Hyperbolic functions}
 	\input{chapters/8.tex} \pagebreak
 	
-	\section{Differential equations}
+	\chapter{Differential equations}
 	\input{chapters/9.tex}
 
 	
