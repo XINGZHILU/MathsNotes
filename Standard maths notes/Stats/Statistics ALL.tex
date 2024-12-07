@@ -1,4 +1,5 @@
-\documentclass[fleqn, 11pt]{article}
+%\documentclass[fleqn, 11pt]{article}
+\documentclass[oneside,fleqn,11pt]{book}
 \usepackage[a4paper, total={7.2in, 10.5in}]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -17,7 +18,7 @@
 
 \title{A Level Mathematics - Statistics}
 \author{Xingzhi Lu}
-\date{For exams in 2025}
+\date{}
 
 %\usepackage{mathptmx}
 \renewcommand\rmdefault{ptm}
@@ -37,10 +38,6 @@
 		\pgfpointanchor{#2}{center}}
 	\pgfmathsetmacro{#3}{\pgfmathresult}%
 }
-
-\title{Further Mathematics Notes - Core Pure}
-\author{Xingzhi Lu}
-\date{For exams in 2026}
 
 % math font
 \usepackage{amsmath}
@@ -155,9 +152,12 @@
 \begin{document}
 	\maketitle
 	
-	\section{Data collection}
-	\subsection{Populations and samples}
-	\subsubsection{Definitions}
+	\part{AS revision contents}
+	
+	
+	\chapter{Data collection}
+	\section{Populations and samples}
+	\subsection{Definitions}
 	\begin{description}
 		\item[Population] The whole set of items that are of interest
 		\item[Census] Observes or measures every member of a population
@@ -166,7 +166,7 @@
 		\item[Sampling frame] A list of all people or item that can potentially be involved in the sample
 	\end{description}
 	
-	\subsubsection{Census}
+	\subsection{Census}
 	\textbf{Advantages}
 	\begin{itemize}
 		\item Gives a completely accurate result, no bias
@@ -177,27 +177,28 @@
 		\item Cannot be used when the testing process destroys the item
 		\item Hard to process large quantity of data
 	\end{itemize}
-	\subsubsection{Sample}
+	\subsection{Sample}
 	\textbf{Advantages}
 	\begin{itemize}
 		\item Easier to implement
 		\item Quicker to implement
 		\item Less data to process
+		\item Cheaper to implement
 	\end{itemize}
 	\textbf{Disadvantages}
 	\begin{itemize}
 		\item The data may not be representative
 		\item The sample may not be large enough to give information about small sub-groups of the population
 	\end{itemize}
-	\subsubsection{Sample size}
+	\subsection{Sample size}
 	\begin{itemize}
 		\item Larger sample size = better accuracy
 		\item If the population is varied a larger sample size is needed to make sure that the sample is representative
 	\end{itemize}
 	
 	
-	\subsection{Random sampling methods}
-	\subsubsection{Simple random sampling}
+	\section{Random sampling methods}
+	\subsection{Simple random sampling}
 	\textbf{Definition}
 	\begin{itemize}
 		\item Every possible sample of size $n$ has an \textbf{equal chance} of being picked
@@ -205,7 +206,7 @@
 	\textbf{Method}
 	\begin{enumerate}
 		\item Each sampling unit is numbered from 1 to $n$
-		\item Generate $x$ random number between 1 to $n$ using random number generators / lottery picks / random number tables (or draw out $x$ names from the lottery hat)
+		\item Generate $x$ random number between 1 to $n$ using random number generators / lottery picks / random number tables (or draw out $x$ names from the lottery hat), ignoring repeats
 		\item Sampling units corresponding to these numbers become the sample
 		\item Data taken from the sample
 	\end{enumerate}
@@ -219,8 +220,9 @@
 	\begin{itemize}
 		\item Not suitable when the population size or the sample size is large as it is potentially time consuming, disruptive and expensive
 		\item A sampling frame is needed
+		\item Chance of being unrepresentative
 	\end{itemize}
-	\subsubsection{Systematic sampling}
+	\subsection{Systematic sampling}
 	\textbf{Definition}
 	\begin{itemize}
 		\item The required elements are chosen at \textbf{regular intervals} from an \textbf{ordered list}
@@ -243,7 +245,7 @@
 		\item A sampling frame is needed
 		\item It can introduce bias if the sampling frame is not random
 	\end{itemize}
-	\subsubsection{Stratified sampling}
+	\subsection{Stratified sampling}
 	\textbf{Definition}
 	\begin{itemize}
 		\item The population is divided into mutually exclusive strata and a random sample is taken from each
@@ -264,8 +266,8 @@
 		\item Population must be clearly classified into distinct strata
 		\item Selection within each stratum suffers from the same disadvantages as simple random sampling
 	\end{itemize}
-	\subsection{Non-random sampling methods}
-	\subsubsection{Quota sampling}
+	\section{Non-random sampling methods}
+	\subsection{Quota sampling}
 	\textbf{Method}
 	\begin{enumerate}
 		\item Population divided into groups according to a given characteristic
@@ -288,7 +290,7 @@
 		\item Non-responses are not recorded
 	\end{itemize}
 	
-	\subsubsection{Opportunity / convenience / pragmatic sampling}
+	\subsection{Opportunity / convenience / pragmatic sampling}
 	\textbf{Method}
 	\begin{enumerate}
 		\item Sample taken from people who are available at time of study and meet the criteria
@@ -302,29 +304,29 @@
 	\textbf{Disadvantages}
 	\begin{itemize}
 		\item Likely to be unrepresentative
-		\item Highly dependent on individual researcher
+		\item Highly dependent on individual researcher (likely to be biased)
 	\end{itemize}
 	
-	\subsection{Large data set}
-	\subsubsection{Scope}
+	\section{Large data set}
+	\subsection{Scope}
 	\begin{itemize}
 		\item Months included: May - October
 		\item Years included: 2015 and 1987
 	\end{itemize}
-	\subsubsection{Background information}
-	%\subsubsection{Cities}
+	\subsection{Background information}
+	%\subsection{Cities}
 	\includegraphics{LDSmap}\\
 	\begin{tabular}{|p{2cm}|p{15cm}|}
 		\hline
 		\textbf{City} & \textbf{Climate and geographical locations} \\
 		\hline
-		Leuchars & Coastal \newline NE of Scotland \newline The north most city \newline Climate generally warm and temperate, significant rainfall throughout the year\\
+		Leuchars & Coastal \newline NE of Scotland \newline Climate generally warm and temperate \newline significant rainfall throughout the year\\
 		\hline
-		Leeming & \textbf{Inland} \newline Climate generally warm and temperate, significant rainfall throughout the year\\
+		Leeming & \textbf{Inland} \newline Climate generally warm and temperate \newline significant rainfall throughout the year\\
 		\hline
-		Heathrow  & \textbf{Inland} \newline Temperate oceanic climate \newline Cool to warm summers, cold winters\\
+		Heathrow  & \textbf{Inland} \newline Temperate oceanic climate \newline Cool to warm summers \newline cold winters\\
 		\hline
-		Hurn  & Coastal \newline Southern England \newline Climate mild with warm summers \newline \textbf{Heavy rainfall} often in \textbf{mild} winters\\
+		Hurn  & Coastal \newline Southern England \newline Mild climate \newline Warm summers + \textbf{heavy rainfall} often in \textbf{mild} winters\\
 		\hline
 		Camborne & Coastal \newline Cornwall (SW England) \newline Climate generally warm and temperate \newline \textbf{High rainfall} even in driest months\\
 		\hline
@@ -334,16 +336,17 @@
 		\hline
 		Perth & Coastal \newline In the \textbf{southern hemisphere} - in winter during May - Oct\\
 		\hline
-	\end{tabular}
+	\end{tabular}\\
+	(Cities are ordered from North to South)
 	
-	%\subsubsection{Weather incidents}
+	%\subsection{Weather incidents}
 	\begin{description}
 		\item[1987] ``Great storm" in UK in October so there are unusually high winds, mild ``El Nino" impact globally
 		\item[2015] Strong ``El Nino" impact espacially in the US so there is cooler temperature and higher rainfall
 	\end{description}
 	
-	\subsubsection{Data recorded}
-	%\subsubsection{Definitions}
+	\subsection{Data recorded}
+	%\subsection{Definitions}
 	\begin{tabular}{|p{5.5cm}|p{11.5cm}|}
 		\hline
 		\textbf{Variable} & \textbf{Unit} \\
@@ -352,8 +355,8 @@
 		\\
 		\hline
 		Daily total rainfall & Daily total precipitation (mm) 09:00 – 09:00 GMT
-		(includes snow or hail, which is melted and measured in the same way as rainfall.)
-		‘Trace’ (tr) is less than 0.05 mm. \newline A reading which is not available will be shown by ‘n/a’
+		(includes snow or hail, which is melted and measured in the same way as rainfall.) \newline
+		'Trace' (tr) is less than 0.05 mm. \newline A reading which is not available will be shown by ‘n/a’
 		\\
 		\hline
 		Daily total sunshine & Sunshine amounts are recorded in hours and tenths and show the amount of bright sunshine recorded on the day of entry. \newline A reading which is not available will be shown by ‘n/a’ \\
@@ -361,7 +364,7 @@
 		Daily maximum relative humidity & A measure of how close the air is to being saturated with water vapour. \newline Relative humidities above 95\% are associated with mist and fog. \newline A reading which is not available will be shown by ‘n/a’
 		\\
 		\hline
-		Daily mean wind direction & The daily mean wind direction the wind is \textbf{coming from}, (clockwise from North) is averaged and rounded to the nearest 10\textdegree \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Daily mean wind direction & The daily mean wind direction the wind is \textbf{coming from}, (clockwise from North) is averaged and rounded to the nearest 10\textdegree \newline
 		Readings which are not available are listed as ‘n/a’.
 		\\
 		\hline
@@ -371,7 +374,7 @@
 		Daily maximum gust & Maximum instantaneous wind speed \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
 		Readings which are not available are listed as ‘n/a’.  \\
 		\hline
-		Daily maximum gust direction & The direction from which the wind was blowing when the maximum gust during the hour commencing at the time of entry occurred, and is measured in degrees from true north. \newline Readings are taken 00:00 – 00:00 GMT, in knots (kn, 1 knot = 1.15mph) \newline
+		Daily maximum gust direction & The direction from which the wind was blowing when the maximum gust during the hour commencing at the time of entry occurred, and is measured in degrees from true north.  \newline
 		Readings which are not available are listed as ‘n/a’.  \\
 		\hline
 		Daily mean cloud cover & Measured in eights (oktas)   \\
@@ -384,7 +387,7 @@
 		\\
 		\hline
 	\end{tabular}
-	\subsubsection{Unit and precision of data}
+	\subsection{Unit and precision of data}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		\textbf{Variable} & \textbf{Unit} & \textbf{Precision}\\
@@ -414,21 +417,21 @@
 	\end{tabular}
 	%* Wind direction is defined as the direction where the wind \textbf{comes from}
 	
-	\subsubsection{Typical values}
-	\subsubsection*{Temperature and wind speed}
+	\subsection{Typical values}
+	\subsection*{Temperature and wind speed}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		\textbf{Location} & \textbf{Temperature range (\textcelsius)}& \textbf{Wind speed range (knots)} \\
 		\hline
-		Camborne & 10-20 & 3-18 \\
+		Leuchars & 4-19 & 3-23 \\
+		\hline
+		Leeming & 4-23 & 3-17 \\
 		\hline
 		Heathrow & 8-29 & 3-19 \\
 		\hline
 		Hurn & 6-24 & 2-19 \\
 		\hline
-		Leeming & 4-23 & 3-17 \\
-		\hline
-		Leuchars & 4-19 & 3-23 \\
+		Camborne & 10-20 & 3-18 \\
 		\hline
 		Beijing & 8-33 & 2-9 \\
 		\hline
@@ -438,7 +441,7 @@
 		\hline
 	\end{tabular}
 	
-	\subsubsection*{Other data}
+	\subsection*{Other data}
 	\begin{tabular}{|p{4.8cm} | p{12.2cm}|}
 		\hline
 		\textbf{Variable} & \textbf{Typical values} \\
@@ -447,7 +450,7 @@
 		\hline
 		Rainfall & 0-60 mm in the UK, more extreme maximums elsewhere (e.g. 102mm in Perth) \\
 		\hline
-		Pressure & 988-1038 Pa \\
+		Pressure & $1013 \pm 25$ Pa \\
 		\hline
 		Wind speed on Beaufort Scale & Mostly light / moderate. Maximum is fresh (5) \\
 		\hline
@@ -457,24 +460,24 @@
 		\hline
 	\end{tabular}
 	
-	\subsubsection{Cleaning data}
+	\subsection{Cleaning data}
 	\begin{description}
-		\item[tr] Needs to be replaced with a number between $0$ and $0.05$ ($0.25$) before processing data
+		\item[tr] Needs to be replaced with a number between $0$ and $0.05$ (ideally $0.025$ as it is the midpoint) before processing data
 		\item[n/a] Problem = data isn't available, usually ignored when doing calculations
 	\end{description}
 	
 	\pagebreak
 	
 	
-	\section{Measurements of location and spread}
-	\subsection{Types of means}
+	\chapter{Measurements of location and spread}
+	\section{Types of means}
 	\begin{description}
 		\item[Mean] $\overline{x}=\dfrac{\sum x}{n}$
 		\item[Median] The middle value when the data values are put in order
 		\item[Mode / modal class] The value or class that occurs most often
 	\end{description}
 	
-	\subsection{Types of data}
+	\section{Types of data}
 	\begin{description}
 		\item[Quantitative data] Associated with numerical observations
 		\item[Qualitative data] Associated with non-numerical observations
@@ -482,16 +485,16 @@
 		\item[Discrete data] Can only take specific values in a given range
 	\end{description}
 	
-	\subsection{Standard deviation / variance}
+	\section{Standard deviation / variance}
 	\begin{description}
 		%\item $S_{xx}=\Sigma (x-\overline{x})^2=\Sigma x^2 - \dfrac{(\Sigma x)^2}{n}$
 		\item[Variance] $\mathrm{Var}(x)=\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2$
 		\item[Standard deviation] $\sigma=\sqrt{\mathrm{Var}(x)}=\sqrt{\dfrac{\Sigma x^2}{n} - (\dfrac{\Sigma x}{n})^2}$
 	\end{description}
 	
-	\subsection{Interpreting distributions}
+	\section{Interpreting distributions}
 	\begin{description}
-		\item[Measuring central tendency] Mean / median / mode
+		\item[Measuring location] Mean / median / mode
 		\item[Measuring spread of data] Variance / standard deviation / range / interpercentile ranges
 	\end{description}
 	
@@ -499,35 +502,35 @@
 	\pagebreak
 	
 	
-	\section{Representations of data}
-	\subsection{Outliers}
+	\chapter{Representations of data}
+	\section{Outliers}
 	\begin{itemize}
 		\item An extreme value that lies outside the overall pattern of data
 		\item By default use $\text{LB} = \LQ - 1.5\times(\UQ-\LQ)$, $\text{UB} = \UQ + 1.5\times(\UQ-\LQ)$
 	\end{itemize}
 	
-	\subsection{Cleaning data}
+	\section{Cleaning data}
 	\begin{itemize}
 		\item Anomalies (\textbf{not all outliers}) should be removed
 		\item Anomalies = when the outlier is clearly an error and will be misleading
 	\end{itemize}
 	
 	
-	\subsection{Histogram}
-	\subsubsection{Reasons for using histograms}
+	\section{Histogram}
+	\subsection{Reasons for using histograms}
 	\begin{itemize}
 		\item Data is continuous
 		\item Data is in groups (with uneven widths)
 	\end{itemize}
-	\subsubsection{Characteristics of histograms}
+	\subsection{Characteristics of histograms}
 	\begin{itemize}
 		\item $\text{area}\propto\text{frequency}$
 	\end{itemize}
 	
-	\subsection{Comparing data sets}
+	\section{Comparing data sets}
 	\begin{description}
-		\item[Location] A has a higher median / mean than B on average so A is ... than B on average
-		\item[Spread] A has a higher IQR / standard deviation than B so there is more variation in the \dots of A than B
+		\item[Comparing location] A has a higher median / mean than B on average so A is ... than B on average
+		\item[Comparing spread] A has a higher IQR / standard deviation than B so there is more variation in the \dots of A than B
 	\end{description}
 	
 	
@@ -535,8 +538,8 @@
 	\pagebreak
 	
 	
-	\section{Correlation}
-	\subsection{Definitions}
+	\chapter{Correlation}
+	\section{Definitions}
 	\begin{description}
 		\item[Bivariate data] Data which has pairs of related values
 		\item[Independent / explanatory variable] The variable that the researcher can control, usually plotted on the x-axis
@@ -544,15 +547,15 @@
 		\item[Correlation] Describes the nature of the linear relationship between 2 variables
 	\end{description}
 	
-	\subsection{Causal relationships}
+	\section{Causal relationships}
 	\begin{itemize}
 		\item 2 variables have a casual relationship if a change in 1 variable causes a change in the other
 		\item[$\star$] Correlation doesn't mean causation (add some explanations in context for questions)
 	\end{itemize}
 	
-	\subsection{Linear regression}
+	\section{Linear regression}
 	* Work these out using a \textbf{calculator} in exams
-	\subsubsection{Regression equation for least squares regression line}
+	\subsection{Regression equation for least squares regression line}
 	\begin{itemize}
 		\item Regression line of $y$ on $x$: $y=a+bx$
 		\item $b=\dfrac{\sum (x_i-\overline{x}) (y_i-\overline{y})}{\sum (x_i-\overline{x})^2}$ \textbf{(not needed for the exam)}
@@ -560,14 +563,14 @@
 		\item Positive correlation: $b$ positive, negative correlation: $b$ negative
 	\end{itemize}
 	
-	\subsubsection{Predicting values}
+	\subsection{Predicting values}
 	\begin{itemize}
 		\item Should not extrapolate, only do interpolation
 		\item Reliability: reliable as it is within the range of data / not reliable as it is extrapolating
 		\item[$\star$] Not suitable for predicting $x$ based on $y$ (the independent variable in this model is $x$, you should not use this model to predict the value of $x$ based on $y$)
 	\end{itemize}
 	
-	\subsubsection{Reason for using a regression line}
+	\subsection{Reason for using a regression line}
 	\begin{itemize}
 		\item The data shows a strong (positive / negative) linear correlation
 	\end{itemize}
@@ -575,8 +578,8 @@
 	\pagebreak
 	
 	
-	\section{Probability}
-	\subsection{Definitions}
+	\chapter{Probability}
+	\section{Definitions}
 	\begin{description}
 		\item[Experiment] A repeatable process that gives rise to a number of outcomes
 		\item[Event] A set of one or more of these outcomes
@@ -589,8 +592,8 @@
 	
 	
 	
-	\section{Statistical distributions}
-	\subsection{Definitions}
+	\chapter{Statistical distributions}
+	\section{Definitions}
 	\begin{description}
 		\item[Random variable] One whose value depends on the outcome of a random event (outcome not known until the event took place)
 		\item[Sample space] The range of values that the outcome can take
@@ -599,13 +602,13 @@
 		\item[Uniform discrete distribution] All the probabilities are equal
 	\end{description}
 	
-	\subsection{Notations}
+	\section{Notations}
 	\begin{itemize}
 		\item Capital letters ($X$ or $Y$) denotes random variables
 		\item Equivalent lowercase letters ($x$ or $y$) denotes particular values of the random variable
 	\end{itemize}
 	
-	\subsubsection{Probability mass / density function}
+	\subsection{Probability mass / density function}
 	\begin{itemize}
 		\item $P(X=x) = \dots$ ($x=\dots$)
 		\item You might need a large bracket e.g. \begin{math}
@@ -617,12 +620,12 @@
 		\end{math}
 	\end{itemize}
 	
-	\subsection{Binomial distribution}
-	\subsubsection{Notation}
+	\section{Binomial distribution}
+	\subsection{Notation}
 	$X \sim B(n,p)$
-	\subsubsection{Probability calculation}
+	\subsection{Probability calculation}
 	$\text{P}(x) = \dbinom{n}{x} p^x q^{n-x}$
-	\subsubsection{Assumptions}
+	\subsection{Assumptions}
 	\begin{itemize}
 		\item There are a fixed number of trials, $n$
 		\item There are two possible outcomes only (success and failure)
@@ -636,11 +639,11 @@
 	\pagebreak
 	
 	
-	\section{Hypothesis testing}
-	\subsection{Definitions}
+	\chapter{Hypothesis testing}
+	\section{Definitions}
 	\begin{description}
 		\item[Hypothesis] A statement about the value of a population parameter
-		\item[Test statistic] Either the result of an experiment or a statistic calculated from the sample e.g. the mean
+		\item[Test statistic] A value computer from sample data
 		\item[Null hypothesis ($H_0$)] The hypothesis assumed to be correct ($\theta=\theta_0$)
 		\item[Alternative hypothesis ($H_1$)] Tells you about the parameter if $H_0$ is rejected as a result of the test ($\theta \neq \theta_0$ / $\theta>\theta_0$ (right tail) / $\theta<\theta_0$ (left tail))
 		\item[Significance level ($\alpha$)] Probability of rejecting $H_0$ when assuming $H_0$ is true
@@ -650,23 +653,24 @@
 		\item[Actual significance level] The probability of incorrectly rejecting the null hypothesis (when $H_0$ is actually true)
 	\end{description}
 	
-	\subsection{Test on proportion / probability of success assuming binomial distribution}
+	\section{Test on proportion / probability of success assuming binomial distribution}
 	$t^*$ = test statistics
-	\subsubsection{By critical value}
+	\subsection{By critical value}
 	\begin{itemize}
 		\item One tailed: if stats test $t^* > \text{cv}$ or $t^* < \text{cv}$ (depends on right / left tail): reject $H_0$, else accept $H_0$
 		\item Two tailed: if stats test $t^* > \text{upper cv}$ or $t^* < \text{lower cv}$: reject $H_0$, else accept $H_0$ (For 2 tailed tests the probability used for calculating cv at the end of each tail = $\dfrac{\alpha}{2}$)
 	\end{itemize}
 	
 	
-	\subsubsection{By $p$ value}
+	\subsection{By $p$ value}
 	\begin{itemize}
 		\item One tailed: if $P(t\geq t^*) < \alpha$: reject $H_0$, else accept $H_0$
 		\item Two tailed: if $P(t\geq t^*) < \dfrac{\alpha}{2}$ or $P(t\leq t^*) > \dfrac{\alpha}{2}$: reject $H_0$, else accept $H_0$
 	\end{itemize}
 	
-	\subsubsection{Presenting the solution}
-	\begin{enumerate}
+	\begin{comment}
+		\subsection{Presenting the solution}
+		\begin{enumerate}
 		\item Define the test statistic, $X$ and the parameter, $p$
 		\item Formulate a model for $X$ ($X \sim B(n, p)$)
 		\item Write down $H_0$ and $H_1$ as statements involving $p$ (these determine whether your test is one or two-tailed)
@@ -675,24 +679,82 @@
 		\item State your conclusion: there is / is not sufficient evidence to reject $H_0$ + a statement \textbf{in the context of the question}
 	\end{enumerate}
 	
-	\subsection{Two tailed tests}
+	\end{comment}
+	
+
+	\section{Two tailed tests}
 	\begin{itemize}
 		\item Halve the significance value to find out the critical region at each end unless otherwise specified
 		\item Notice if the question asks for the probability in each tail to be \textbf{as close to $\dfrac{\alpha}{2}$ as possible}
+		\item Always use 2 tailed tests if whether testing for increase / decrease in $p$ is not specified
 	\end{itemize}
+	
+	\section{Example responses}
+	\subsection{One tailed + critical region}
+	\begin{example}
+		A single observation is taken from $X\sim B(10, p)$ and $x=1$ is obtained. Use this value to test $H_0: p=0.4$ against $H_1:p<0.4$ using a $5\%$ significance level
+	\end{example}
+	
+	\begin{solution}
+		$H_0: p=0.4$\\
+		$H_1:p<0.4$\\
+		Test statistic: $x=1$\\
+		$\text{Significance level} = 5\%$\\
+		One-tailed test\\
+		$P(X \leq c_1) < 0.05$\\
+		$P(X \leq 1) = 0.0463$ ($P(X \leq 2) = 0.1672$ too big)\\
+		$c_1 = 1$ so critical region is $X\leq 1$\\
+		$x=1$ lies in the critical region, so evidence suggests rejecting $H_0$ at $5\%$ significance level
+	\end{solution}
+	
+	\subsection{One tailed + $p$ value}
+	\begin{example}
+		A single observation is taken from $X\sim B(10, p)$ and $x=5$ is obtained. Use this value to test $H_0: p=0.25$ against $H_1:p>0.25$ using a $5\%$ significance level
+	\end{example}
+	
+	\begin{solution}
+		$H_0: p=0.25$\\
+		$H_1:p>0.25$\\
+		Test statistic: $x=5$\\
+		$\text{Significance level} = 5\%$\\
+		One-tailed test
+		\begin{align*}
+			P(X\geq 5) &= 1-P(X\leq 4) \\ &= 0.0781
+		\end{align*}
+		Compare $p$-value with significance level: $0.0781 > 0.05$\\
+		It is not significant so no evidence to reject $H_0$ at the 5\% significance level
+	\end{solution}
+	
+	\subsection{Two tailed - find critical region when using `probability as close to'}
+	\begin{example}
+		$Y \sim B(25, p)$, given that $H_0: p=0.42$, $H_1:p \neq 0.42$, find the critical region for the test using $10\%$ significance level, \textbf{the probability in each tail should be as close to $5\%$ as possible}
+	\end{example}
+	
+	\begin{solution}
+		$P(Y\leq c_1)$ as close to 0.05 as possible\\
+		$P(Y\leq 6) = 0.0495 < 0.05$ - closest to $0.05$ so $c_1 = 6$\\
+		$P(Y\leq 7) = 0.1106 > 0.05$\\\\
+		
+		$P(Y\geq c_2)$ as close to 0.05 as possible $\rightarrow$ $1-P(Y\leq c_2 -1)$ as close to 0.05 as possible $\rightarrow$ $P(Y\leq c_2 -1)$ as close to 0.95 as possible\\
+		$P(Y\leq 14) = 0.9465 < 0.95$ - closest to $0.05$ so $c_2 = 14+1 = 15$\\
+		$P(Y\leq 15) = 0.19779 > 0.95$
+	\end{solution}
+		
 	
 	\pagebreak
 	
+	\part{A2 contents}
 	
-	\section{Regression, correlation and hypothesis testing}
 	
-	\subsection{PMCC}
+	\chapter{Regression, correlation and hypothesis testing}
+	
+	\section{PMCC}
 	\begin{itemize}
 		\item Measures the strength of \textbf{linear} correlation
 		\item $r =\dfrac{\sum\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)}{\sqrt{\sum\left(x_{i}-\bar{x}\right)^{2} \sum\left(y_{i}-\bar{y}\right)^{2}}}$ \textbf{(not needed for the exam)}
 	\end{itemize}
 	
-	\subsection{Hypothesis test for zero linear correlation}
+	\section{Hypothesis test for zero linear correlation}
 	\begin{itemize}
 		\item $H_0$: $\rho = 0$
 		\item $H_1$: $\rho \neq 0$ (two tailed) / $\rho > 0$ (right tail) / $\rho < 0$ (left tail)
@@ -704,26 +766,26 @@
 	
 
 	
-	%\subsubsection{Sample variance}
+	%\subsection{Sample variance}
 	%\begin{itemize}
 	%	\item $S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
 	%\end{itemize}
 	
 
 	
-	\subsection{Transforming to linear regression}
-	\subsubsection{Exponential}
+	\section{Transforming to linear regression}
+	\subsection{Exponential}
 	\begin{itemize}
 		\item $y=ab^x\rightarrow\ln y = x\ln b + \ln a$
 		\item x-axis = $x$, y-axis = $\ln y$, gradient = $\ln b$, y-intercept = $\ln a$
 	\end{itemize}
-	\subsubsection{Power}
+	\subsection{Power}
 	\begin{itemize}
 		\item $y=ax^b\rightarrow\ln y = b\ln x + \ln a$
 		\item x-axis = $\ln x$, y-axis = $\ln y$, gradient = $b$, y-intercept = $\ln a$
 	\end{itemize}
 	
-	\subsubsection{Logarithmic}
+	\subsection{Logarithmic}
 	\begin{itemize}
 		\item $y=a\ln x\rightarrow$ kept the same
 		\item x-axis = $\ln x$, y-axis = $y$, gradient = $a$
@@ -731,21 +793,21 @@
 	
 	\pagebreak
 	
-	\section{Conditional probability}
+	\chapter{Conditional probability}
 	
 	\pagebreak
 	
-	\section{The normal distribution}
+	\chapter{The normal distribution}
 	
-	\subsection{Notation}
+	\section{Notation}
 	$X \sim N(\mu,\sigma^2)$
-	\subsubsection{Conditions}
+	\subsection{Conditions}
 	\begin{itemize}
 		\item Mean = median = mode
 		\item Continuous variable
 		\item Symmetrical distribution
 	\end{itemize}
-	\subsection{Shape of distribution}
+	\section{Shape of distribution}
 	\begin{itemize}
 		\item Symmetrical shape (mean = median = mode)
 		\item Bell-shaped curve with asymptotes at each end
@@ -755,14 +817,14 @@
 	\end{itemize}
 	
 	
-	\subsection{Central limit theorem}
+	\section{Central limit theorem}
 	If $n$ is large enough ($n\geq35$), then sample mean $\overline{x}$ is normally distributed: $\overline{x} \sim N(M_{\overline{x}}, \sigma_{\overline{x}}^2)$
 	\begin{itemize}
 		\item $M_{\overline{x}}=M$
 		\item $\sigma_{\overline{x}}^2=\dfrac{1}{n}\sigma^2 \rightarrow \sigma_{\overline{x}} = \dfrac{\sigma}{\sqrt{n}}$
 	\end{itemize}
 	
-	\subsection{Approximation of binomial distribution}
+	\section{Approximation of binomial distribution}
 	If $n$ is large ($n\geq35$) and $p$ is close to $0.5$, then $X \sim B(n,p)$ can be modelled as $Y \sim N(np, np(1-p))$\\
 	When estimating probability $(0\leq a \leq n, \: a \in \textbf{N})$:
 	\begin{itemize}
