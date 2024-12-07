@@ -1,0 +1,88 @@
+	\chapter{Regression, correlation and hypothesis testing}
+
+\section{PMCC}
+\begin{itemize}
+	\item Measures the strength of \textbf{linear} correlation
+	\item $r =\dfrac{\sum\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)}{\sqrt{\sum\left(x_{i}-\bar{x}\right)^{2} \sum\left(y_{i}-\bar{y}\right)^{2}}}$ \textbf{(not needed for the exam)}
+\end{itemize}
+
+\section{Hypothesis test for zero linear correlation}
+\begin{itemize}
+	\item $H_0$: $\rho = 0$
+	\item $H_1$: $\rho \neq 0$ (two tailed) / $\rho > 0$ (right tail) / $\rho < 0$ (left tail)
+	\item Check the data sheet for cv
+	\item Work out $r$ value of sample using linear regression on calculator
+	\item Sample $r >$ cv = reject $H_0$, else: not reject $H_0$
+\end{itemize}
+
+
+
+
+%\subsection{Sample variance}
+%\begin{itemize}
+%	\item $S^2=\dfrac{\Sigma(x_i-\overline{x})^2}{n-1}=\dfrac{1}{n-1}(\Sigma x_i^2-\overline{x}^2n)=\dfrac{1}{n-1}(\Sigma x_i^2-\dfrac{(\Sigma x)^2}{n})$
+%\end{itemize}
+
+
+
+\section{Transforming to linear regression}
+\subsection{Exponential}
+\begin{itemize}
+	\item $y=ab^x\rightarrow\ln y = x\ln b + \ln a$
+	\item x-axis = $x$, y-axis = $\ln y$, gradient = $\ln b$, y-intercept = $\ln a$
+\end{itemize}
+\subsection{Power}
+\begin{itemize}
+	\item $y=ax^b\rightarrow\ln y = b\ln x + \ln a$
+	\item x-axis = $\ln x$, y-axis = $\ln y$, gradient = $b$, y-intercept = $\ln a$
+\end{itemize}
+
+\subsection{Logarithmic}
+\begin{itemize}
+	\item $y=a\ln x\rightarrow$ kept the same
+	\item x-axis = $\ln x$, y-axis = $y$, gradient = $a$
+\end{itemize}
+
+
+
+\chapter{Conditional probability}
+
+
+
+\chapter{The normal distribution}
+
+\section{Notation}
+$X \sim N(\mu,\sigma^2)$
+\subsection{Conditions}
+\begin{itemize}
+	\item Mean = median = mode
+	\item Continuous variable
+	\item Symmetrical distribution
+\end{itemize}
+\section{Shape of distribution}
+\begin{itemize}
+	\item Symmetrical shape (mean = median = mode)
+	\item Bell-shaped curve with asymptotes at each end
+	\item Total area under curve = $1$
+	\item Has points of inflection at $\mu+\sigma$ and $\mu-\sigma$
+	\item Approximately 68\% of data lies within 1 s.d. from mean, 95\% within 2 s.d., 99.7\% (nearly all) within 3 s.d.
+\end{itemize}
+
+
+\section{Central limit theorem}
+If $n$ is large enough ($n\geq35$), then sample mean $\overline{x}$ is normally distributed: $\overline{x} \sim N(M_{\overline{x}}, \sigma_{\overline{x}}^2)$
+\begin{itemize}
+	\item $M_{\overline{x}}=M$
+	\item $\sigma_{\overline{x}}^2=\dfrac{1}{n}\sigma^2 \rightarrow \sigma_{\overline{x}} = \dfrac{\sigma}{\sqrt{n}}$
+\end{itemize}
+
+\section{Approximation of binomial distribution}
+If $n$ is large ($n\geq35$) and $p$ is close to $0.5$, then $X \sim B(n,p)$ can be modelled as $Y \sim N(np, np(1-p))$\\
+When estimating probability $(0\leq a \leq n, \: a \in \textbf{N})$:
+\begin{itemize}
+	\item $\text{P}(X>a)\approx \text{P}(Y>[a+0.5])$
+	\item $\text{P}(X\geq a)\approx \text{P}(Y\geq [a-0.5])$
+	\item $\text{P}(X=a)\approx \text{P}([a-0.5]<Y<[a+0.5])$
+	\item $\text{P}(X<a)\approx \text{P}(Y<[a-0.5])$
+	\item $\text{P}(X \leq a)\approx \text{P}(Y\leq [a+0.5])$
+\end{itemize}
