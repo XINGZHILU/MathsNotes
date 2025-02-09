@@ -12,8 +12,12 @@ For $a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots +a_{1}x+a_{0}=0$:
 $\sum_{r=1}^{n} r^2=\dfrac{n(n+1)(2n+1)}{6}$ 
 \subsection{Summation of cubes}
 $\sum_{r=1}^{n} r^3=\dfrac{(n(n+1))^2}{4}$
-\section{Maclaurin series of expansion}
-$f(x)=f(0)+f'(0)x+\dfrac{f''(0)x^2}{2!}+\dots+\dfrac{f^{(r)}(0)x^r}{r!}+\dots$\\
+\section{Taylor and Maclaurin series of expansion}
+\subsection{Taylor series}
+$$f(x)=f(0)+f'(a)x+\dfrac{f''(a)(x)-a^2}{2!}+\dots+\dfrac{f^{(r)}(a)(x-a)^r}{r!}+\dots$$\\
+
+\subsection{Maclaurin series}
+$$f(x)=f(0)+f'(0)x+\dfrac{f''(0)x^2}{2!}+\dots+\dfrac{f^{(r)}(0)x^r}{r!}+\dots$$\\
 This series is valid provided that $f(0), f'(0), f''(0),\dots,f^{(r)}(0),\dots$ all have \textbf{finite values}
 
 \section{Series expansion of compound functions}
@@ -24,3 +28,10 @@ This series is valid provided that $f(0), f'(0), f''(0),\dots,f^{(r)}(0),\dots$ 
 	\item $\cos x = \frac{e^{ix}+e^{-ix}}{2}=1-\frac{x^{2}}{2!}+\frac{x^{4}}{4!}-...+(-1)^r\dfrac{x^{2r}}{(2r)!}+\dots$ for all $x$
 	\item $\arctan x = x-\dfrac{x^3}{x}+\dfrac{x^5}{5}-\dots+(-1)^r\dfrac{x^{2r+1}}{2r+1}+\dots$ for $-1<x\leq1$
 \end{itemize}
+
+\section{How to prove series}
+\begin{enumerate}
+	\item Use Taylor and Maclaurin Series
+	\item Use basic formulae for expansion
+	\item Use geometric series
+\end{enumerate}
