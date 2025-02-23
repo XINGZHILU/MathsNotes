@@ -2,15 +2,15 @@
 \subsection{The integrating factor}
 A first order differential equation of the form $\dfrac{dy}{dx}+P(x)y = Q(x)$can be solved by multiplying every term by the integrating factor $e^{\int P(x)dx}$
 \begin{example}
-	Find the general solution of the differential equation $$\dfrac{dy}{dx}-4y=e^x$$
+    Find the general solution of the differential equation $$\dfrac{dy}{dx}-4y=e^x$$
 \end{example}
 \begin{solution}
-	The integrating factor is $e^{\int (-4) dx}=e^{-4x}$
-	\begin{flalign*}
-		e^{-4x}\dfrac{dy}{dx}-4e^{-4x}y&=e^xe^{-4x}\\
-		\dfrac{d}{dx}(e^{-4x}y)&=e^{-3x}\\
-		e^{-4x}y &= \int e^{-4x} \: dx	\\
-		\nonumber &= -\frac{1}{3}e^{-3x} + c \\
-		y &= -\frac{1}{3}e^{x} + ce^{4x}
-	\end{flalign*}
+    The integrating factor is $e^{\int (-4) dx}=e^{-4x}$
+    \begin{flalign*}
+        e^{-4x}\dfrac{dy}{dx}-4e^{-4x}y & =e^xe^{-4x}                   \\
+        \dfrac{d}{dx}(e^{-4x}y)         & =e^{-3x}                      \\
+        e^{-4x}y                        & = \int e^{-4x} \: dx          \\
+        \nonumber                       & = -\frac{1}{3}e^{-3x} + c     \\
+        y                               & = -\frac{1}{3}e^{x} + ce^{4x}
+    \end{flalign*}
 \end{solution}
