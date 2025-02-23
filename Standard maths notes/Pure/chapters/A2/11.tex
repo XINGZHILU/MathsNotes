@@ -2,15 +2,22 @@
 $\int_{a}^{b} f(x) \: dx = \lim\limits_{\delta x\rightarrow0}\sum_{x=a}^{b}f(x)\delta x$
 
 \section{Formulae}
-Formula sheet:\\\\
-\begin{tabular}{ll}
-    $\textbf{f(x)}$ & \textbf{$\int f(x) \: dx$ ($+c$)}                                                                             \\&\\
-    $\sec^2kx$      & $\dfrac{1}{k} \tan kx$                                                                                        \\&\\
-    $\tan kx$       & $\dfrac{1}{k} \ln |\sec kx|$                                                                                  \\&\\
-    $\cot kx$       & $\dfrac{1}{k} \ln |\sin kx|$                                                                                  \\&\\
-    $\cosec kx$     & $-\dfrac{1}{k} \ln |\cosec kx + \cot kx|$, $\dfrac{1}{k} \ln \left|\tan (\dfrac{1}{2}kx)\right|$              \\&\\
-    $\sec kx$       & $\dfrac{1}{k} \ln |\sec kx + \tan kx|$, $\dfrac{1}{k} \ln \left|\tan (\dfrac{1}{2}kx+\dfrac{1}{4}\pi)\right|$ \\
-\end{tabular}\\
+\subsection{Integrating trigonometric functions}
+\begin{itemize}
+    \item \[\int\sin x \dx = -\cos x + c\]
+    \item \[\int\cos x \dx = \sin x + c\]
+    \item \[\int \tan x \dx = -\ln |\cos x| + c= \ln |\sec x| + c\]
+    \item \[\int \cot x \dx = \ln |\sin x| + c = -\ln |\csc x| + c\]
+    \item \[\int \sec x \dx = \int \frac{\sec x(\sec x + \tan x)}{\sec x + \tan x} \dx = \ln |\sec x + \tan x| + c = \ln \left|\tan\left(\frac{1}{2}x+\frac{1}{4}\pi \right)\right| + c\]
+    \item \[\int \csc x \dx = -\ln|\csc x + \cot x| + c = \ln \left|\tan\left(\frac{1}{2}x\right)\right| + c\]
+    \item \[\int \sin^2 x \dx = \int \frac{1-\cos 2x}{2} \dx = \frac{2x-\sin 2x}{4} + c\]
+    \item \[\int \cos^2 x \dx = \int \frac{1+\cos 2x}{2} \dx = \frac{2x+\sin 2x}{4} + c\]
+    \item \[\int \tan^2 x \dx = \int \sec^2 x -1 \dx = \tan x - x + c\]
+    \item \[\int \cot^2 x \dx = \int \csc^2 x -1 \dx = -\cot x - x + c\]
+    \item \[\int \sin x \cos x \dx = \int \frac{\sin 2x}{2} \dx = -\dfrac{\cos 2x}{4} + c\]
+    \item \[\int \tan x \sec x \dx = \sec x + c\]
+    \item \[\int \cot x \csc x \dx = -\csc x + c\]
+\end{itemize}
 Integrating $\sin^2x$ or $\cos^2x$ (power descending):
 \begin{itemize}
     \item $\int \sin ^2 x \: dx=\int \dfrac{1-\cos 2x}{2} \: dx=\dfrac{1}{2}\left(x-\dfrac{\sin 2x}{2}\right)+c$
