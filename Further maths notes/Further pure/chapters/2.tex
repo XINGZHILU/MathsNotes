@@ -18,113 +18,77 @@
 %     \item $r=a\cos\theta$
 % \end{itemize}
 
-\section{Ellipse}
-\subsection{Graph}
-\includegraphics[width=0.4\textwidth]{ellipse}\\
-
-\subsection{Definition}
-\begin{itemize}
-    \item $PF_1 + PF_2 = 2a$
-    \item $\dfrac{\text{distance from point $P$ to a focus}}{\text{distance from the same point to the corresponding directrix}}=e=\frac{c}{a}$
-\end{itemize}
-\subsection{Cartesian equation}
-\begin{description}
-    \item[Centre $(0,0)$] $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$
-    \item[Centre $(h,k)$] $\dfrac{(x-h)^2}{a^2}+\dfrac{(y-k)^2}{b^2}=1$
-\end{description}
-\subsection{Parametric equation}
-\begin{description}
-    \item[Centre $(0,0)$] $x=a\cos t$, $y=b\sin t$ ($0\leq t < 2\pi$)
-    \item[Centre $(h,k)$] $x=h+a\cos t$, $y=k+b\sin t$ ($0\leq t < 2\pi$)
-\end{description}
-\subsection{Eccentricity}
-\begin{itemize}
-    \item $e=\frac{c}{a}=\sqrt{1-\frac{b^2}{a^2}}$
-    \item $0<e<1$
-\end{itemize}
-\subsection{Directrix}
-\begin{itemize}
-    \item $x=h\pm \dfrac{a^2}{c} = h\pm\frac{a}{e}$
-    \item $(h-c, 0)$ corresponds to $x=h-\frac{a}{e}$, $(h+c, 0)$ corresponds to $x=h+\frac{a}{e}$
-\end{itemize}
-
-\section{Rectangular hyperbola}
-\subsection{Graph}
-\includegraphics[width=0.4\textwidth]{hyperbola.png}
-\begin{itemize}
-    \item Asymptotes at $y=\pm \frac{b}{a}x$
-\end{itemize}
-\subsection{Definition}
-\begin{itemize}
-    \item $|PF_1 - PF_2| = 2a$
-\end{itemize}
-\subsection{Cartesian equation}
-\begin{description}
-    \item[Centre $(0,0)$] $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ ($b^2=c^2-a^2$)
-    \item[Centre $(h,k)$] $\dfrac{(x-h)^2}{a^2}-\dfrac{(y-k)^2}{b^2}=1$
-\end{description}
-\subsection{Parametric equation}
-\subsubsection{Using $\sec$ and $\tan$}
-\begin{description}
-    \item[Centre $(0,0)$] $x=a\sec t$, $y=b\tan t$
-    \item[Centre $(h,k)$] $x=h+a\sec t$, $y=k+b\tan t$
-    \item[Domain] $t\neq \frac{\pi}{2}+k\pi$
-\end{description}
-\subsubsection{Using $\cosh$ and $\sinh$}
-
-\begin{description}
-    \item[Centre $(0,0)$] $x=\pm a\cosh t$, $y=b\sinh t$
-    \item[Centre $(h,k)$] $x=h\pm a\cosh t$, $y=k+b\sinh t$
-    \item[Domain] $t \in \mathbb{R}$
-\end{description}
-\subsection{Eccentricity}
-\begin{itemize}
-    \item $e=\frac{c}{a}=\sqrt{1-\frac{b^2}{a^2}}$
-    \item $e>1$
-\end{itemize}
-\subsection{Directrix}
-\begin{itemize}
-    \item $x=h\pm \dfrac{a^2}{c} = h\pm\frac{a}{e}$
-    \item $(h-c, 0)$ corresponds to $x=h+\frac{a}{e}$, $(h+c, 0)$ corresponds to $x=h-\frac{a}{e}$
-\end{itemize}
-
-
 \section{Parabola}
 \subsection{Graph}
-\includegraphics[width=0.4\textwidth]{hyperbola.png}
+\includegraphics[width=0.6\textwidth]{parabola.png}
 \begin{itemize}
-    \item Asymptotes at $y=\pm \frac{b}{a}x$
+    \item Symmetrix about the $x$-axis
+    \item Focus at $(a, 0)$
+    \item Vertex at $(0, 0)$
 \end{itemize}
 \subsection{Definition}
 \begin{itemize}
-    \item $|PF_1 - PF_2| = 2a$
+    \item The locus of points that are the \textbf{same distance} from a fixed point, $S$, 
+    called the \textbf{focus}, and a fixed straight line called the \textbf{directrix}
+    \item $\dfrac{\text{distance to foci}}{\text{distance to directrix}} = e = 1$
 \end{itemize}
 \subsection{Cartesian equation}
-\begin{description}
-    \item[Centre $(0,0)$] $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ ($b^2=c^2-a^2$)
-    \item[Centre $(h,k)$] $\dfrac{(x-h)^2}{a^2}-\dfrac{(y-k)^2}{b^2}=1$
-\end{description}
+\begin{itemize}
+    \item $y^2=4ax$ ($a>0$)
+\end{itemize}
 \subsection{Parametric equation}
-\subsubsection{Using $\sec$ and $\tan$}
-\begin{description}
-    \item[Centre $(0,0)$] $x=a\sec t$, $y=b\tan t$
-    \item[Centre $(h,k)$] $x=h+a\sec t$, $y=k+b\tan t$
-    \item[Domain] $t\neq \frac{\pi}{2}+k\pi$
-\end{description}
-\subsubsection{Using $\cosh$ and $\sinh$}
-
-\begin{description}
-    \item[Centre $(0,0)$] $x=\pm a\cosh t$, $y=b\sinh t$
-    \item[Centre $(h,k)$] $x=h\pm a\cosh t$, $y=k+b\sinh t$
-    \item[Domain] $t \in \mathbb{R}$
-\end{description}
+\begin{itemize}
+    \item $x=at^2$
+    \item $y=2at$
+    \item $t\in \Rset$
+\end{itemize}
 \subsection{Eccentricity}
 \begin{itemize}
-    \item $e=\frac{c}{a}=\sqrt{1-\frac{b^2}{a^2}}$
-    \item $e>1$
+    \item $e=1$
 \end{itemize}
 \subsection{Directrix}
 \begin{itemize}
-    \item $x=h\pm \dfrac{a^2}{c} = h\pm\frac{a}{e}$
-    \item $(h-c, 0)$ corresponds to $x=h+\frac{a}{e}$, $(h+c, 0)$ corresponds to $x=h-\frac{a}{e}$
+    \item The directrix has equation $x+a=0$
+\end{itemize}
+\subsection{Tangents and normals}
+\begin{itemize}
+    \item $\dfrac{\dy}{\dx} = \frac{1}{t} = \frac{2a}{y}$
+    \item Equation of tangent: $ty=x+at^2$ at $P(at^2, 2at)$
+    \item Equation of normal: $y+tx=2at+at^3$ at $P(at^2, 2at)$
+\end{itemize}
+
+\section{Rectangular hyperbolas}
+\subsection{Graph}
+\includegraphics[width=0.3\textwidth]{rectangular_hyperbola.png}
+\begin{itemize}
+    \item Asymptotes at $x=0$ and $y=0$ ($x$ and $y$-axis)
+\end{itemize}
+\subsection{Definition}
+\begin{itemize}
+    \item The locus of points that are the \textbf{same distance} from a fixed point, $S$, 
+    called the \textbf{focus}, and a fixed straight line called the \textbf{directrix}
+    \item $\dfrac{\text{distance to foci}}{\text{distance to directrix}} = e = 1$
+\end{itemize}
+\subsection{Cartesian equation}
+\begin{itemize}
+    \item $xy=c^2$ ($c>0$)
+\end{itemize}
+\subsection{Parametric equation}
+\begin{itemize}
+    \item $x=ct$
+    \item $y=\frac{c}{t}$
+    \item $t \neq 0, t\in\Rset$
+\end{itemize}
+\subsection{Eccentricity}
+\begin{itemize}
+    \item $e=\sqrt{2}$
+\end{itemize}
+\subsection{Directrix}
+\begin{itemize}
+    \item $x+y=\pm c\sqrt{2}$
+\end{itemize}
+\subsection{Tangents and normals}
+\begin{itemize}
+    \item Equation of tangent: $x+t^2y=2ct$ at $P(ct, \frac{c}{t})$
+    \item Equation of normal: $t^3x-ty=c(t^4-1)$ at $P(ct, \frac{c}{t})$
 \end{itemize}
