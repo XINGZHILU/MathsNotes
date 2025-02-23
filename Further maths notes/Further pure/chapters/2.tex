@@ -1,0 +1,130 @@
+% \section{Circle}
+% \subsection{Definition of circle}
+% \subsubsection{Cartesian form}
+% \begin{itemize}
+%     \item $(x-a)^2+(y-b)^2=r^2$
+% \end{itemize}
+
+% \subsubsection{Parametric form}
+% \begin{itemize}
+%     \item $x=a+r\cos\theta$
+%     \item $y=b+r\sin\theta$
+% \end{itemize}
+
+% \subsubsection{Polar form}
+% \begin{itemize}
+%     \item $r=a$
+%     \item $r=a\sin\theta$
+%     \item $r=a\cos\theta$
+% \end{itemize}
+
+\section{Ellipse}
+\subsection{Graph}
+\includegraphics[width=0.4\textwidth]{ellipse}\\
+
+\subsection{Definition}
+\begin{itemize}
+    \item $PF_1 + PF_2 = 2a$
+    \item $\dfrac{\text{distance from point $P$ to a focus}}{\text{distance from the same point to the corresponding directrix}}=e=\frac{c}{a}$
+\end{itemize}
+\subsection{Cartesian equation}
+\begin{description}
+    \item[Centre $(0,0)$] $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$
+    \item[Centre $(h,k)$] $\dfrac{(x-h)^2}{a^2}+\dfrac{(y-k)^2}{b^2}=1$
+\end{description}
+\subsection{Parametric equation}
+\begin{description}
+    \item[Centre $(0,0)$] $x=a\cos t$, $y=b\sin t$ ($0\leq t < 2\pi$)
+    \item[Centre $(h,k)$] $x=h+a\cos t$, $y=k+b\sin t$ ($0\leq t < 2\pi$)
+\end{description}
+\subsection{Eccentricity}
+\begin{itemize}
+    \item $e=\frac{c}{a}=\sqrt{1-\frac{b^2}{a^2}}$
+    \item $0<e<1$
+\end{itemize}
+\subsection{Directrix}
+\begin{itemize}
+    \item $x=h\pm \dfrac{a^2}{c} = h\pm\frac{a}{e}$
+    \item $(h-c, 0)$ corresponds to $x=h-\frac{a}{e}$, $(h+c, 0)$ corresponds to $x=h+\frac{a}{e}$
+\end{itemize}
+
+\section{Rectangular hyperbola}
+\subsection{Graph}
+\includegraphics[width=0.4\textwidth]{hyperbola.png}
+\begin{itemize}
+    \item Asymptotes at $y=\pm \frac{b}{a}x$
+\end{itemize}
+\subsection{Definition}
+\begin{itemize}
+    \item $|PF_1 - PF_2| = 2a$
+\end{itemize}
+\subsection{Cartesian equation}
+\begin{description}
+    \item[Centre $(0,0)$] $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ ($b^2=c^2-a^2$)
+    \item[Centre $(h,k)$] $\dfrac{(x-h)^2}{a^2}-\dfrac{(y-k)^2}{b^2}=1$
+\end{description}
+\subsection{Parametric equation}
+\subsubsection{Using $\sec$ and $\tan$}
+\begin{description}
+    \item[Centre $(0,0)$] $x=a\sec t$, $y=b\tan t$
+    \item[Centre $(h,k)$] $x=h+a\sec t$, $y=k+b\tan t$
+    \item[Domain] $t\neq \frac{\pi}{2}+k\pi$
+\end{description}
+\subsubsection{Using $\cosh$ and $\sinh$}
+
+\begin{description}
+    \item[Centre $(0,0)$] $x=\pm a\cosh t$, $y=b\sinh t$
+    \item[Centre $(h,k)$] $x=h\pm a\cosh t$, $y=k+b\sinh t$
+    \item[Domain] $t \in \mathbb{R}$
+\end{description}
+\subsection{Eccentricity}
+\begin{itemize}
+    \item $e=\frac{c}{a}=\sqrt{1-\frac{b^2}{a^2}}$
+    \item $e>1$
+\end{itemize}
+\subsection{Directrix}
+\begin{itemize}
+    \item $x=h\pm \dfrac{a^2}{c} = h\pm\frac{a}{e}$
+    \item $(h-c, 0)$ corresponds to $x=h+\frac{a}{e}$, $(h+c, 0)$ corresponds to $x=h-\frac{a}{e}$
+\end{itemize}
+
+
+\section{Parabola}
+\subsection{Graph}
+\includegraphics[width=0.4\textwidth]{hyperbola.png}
+\begin{itemize}
+    \item Asymptotes at $y=\pm \frac{b}{a}x$
+\end{itemize}
+\subsection{Definition}
+\begin{itemize}
+    \item $|PF_1 - PF_2| = 2a$
+\end{itemize}
+\subsection{Cartesian equation}
+\begin{description}
+    \item[Centre $(0,0)$] $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ ($b^2=c^2-a^2$)
+    \item[Centre $(h,k)$] $\dfrac{(x-h)^2}{a^2}-\dfrac{(y-k)^2}{b^2}=1$
+\end{description}
+\subsection{Parametric equation}
+\subsubsection{Using $\sec$ and $\tan$}
+\begin{description}
+    \item[Centre $(0,0)$] $x=a\sec t$, $y=b\tan t$
+    \item[Centre $(h,k)$] $x=h+a\sec t$, $y=k+b\tan t$
+    \item[Domain] $t\neq \frac{\pi}{2}+k\pi$
+\end{description}
+\subsubsection{Using $\cosh$ and $\sinh$}
+
+\begin{description}
+    \item[Centre $(0,0)$] $x=\pm a\cosh t$, $y=b\sinh t$
+    \item[Centre $(h,k)$] $x=h\pm a\cosh t$, $y=k+b\sinh t$
+    \item[Domain] $t \in \mathbb{R}$
+\end{description}
+\subsection{Eccentricity}
+\begin{itemize}
+    \item $e=\frac{c}{a}=\sqrt{1-\frac{b^2}{a^2}}$
+    \item $e>1$
+\end{itemize}
+\subsection{Directrix}
+\begin{itemize}
+    \item $x=h\pm \dfrac{a^2}{c} = h\pm\frac{a}{e}$
+    \item $(h-c, 0)$ corresponds to $x=h+\frac{a}{e}$, $(h+c, 0)$ corresponds to $x=h-\frac{a}{e}$
+\end{itemize}

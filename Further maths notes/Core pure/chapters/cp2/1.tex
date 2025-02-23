@@ -1,0 +1,92 @@
+\section{More forms of expressing complex number}
+\subsection{Polar form}
+\begin{itemize}
+    \item $z=(r,\theta)$
+    \item $r=\sqrt{a^2+b^2}$, $\theta = \arg(z)$
+    \item $a=r\cos\theta$, $b=r\sin\theta$, $\tan\theta=\dfrac{b}{a}$
+    \item $z=r\cos\theta+r\sin\theta i = r(\cos\theta+\sin\theta i)=r\cis \theta$
+\end{itemize}
+\subsection{Exponential / Euler form}
+$$z=re^{i\theta}$$
+\subsection{When to use which form}
+\begin{description}
+	\item[Addition / subtraction: ] Cartesian form (see CP1 chapter 1)
+	\item[Multiple / division / power / root: ] Polar / Euler form
+\end{description}
+
+\section{Calculations of complex numbers}
+\subsection{Multiplication and division}
+\begin{itemize}
+	\item $z_1z_2=r_1r_2\cis\left(\theta_1+\theta_2\right)=r_1r_2e^{i(\theta_1+\theta_2)}$
+	\item $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\cis(\theta_1-\theta_2)=\dfrac{r_1}{r_2}e^{i(\theta_1-\theta_2)}$
+	\item 
+	\item :  ($k=0,1,2,\dots,n-2,n-1$)
+	\begin{itemize}
+		\item[$\star$] They form vertices of a regular n-gon in the Argand diagram with its centre at the origin
+	\end{itemize}
+	\item $\sqrt{a+ib}=\pm\left(\sqrt{\dfrac{|z|+a}{2}}+i\dfrac{b}{|b|}\sqrt{\dfrac{|z|-a}{2}}\right)$
+
+	\item[$\star$] Complex numbers' sizes cannot be compared
+\end{itemize}
+
+\subsection{Exponential calculations}
+\begin{itemize}
+    \item De Moivre's theorem: for any integer $n$: $z^n = r^n\cis(n\theta)=r^ne^{in\theta}$
+\end{itemize}
+
+\subsection{$n$th root of complex numbers}
+\begin{itemize}
+    \item $\sqrt[n]{z}=\sqrt[n]{r}\cis\left(\dfrac{\theta+2k\pi}{n}\right)=\sqrt[n]{r}e^{i\left(\dfrac{\theta+2k\pi}{n}\right)}$, where $k\in \mathbb{Z}$ ($k=0$ to $k=n-1$ gives a complete cycle)
+    \item The $n$th roots of any complex number $a$ lie at the vertices of a regular $n$-gon with its centre at the origin
+\end{itemize}
+
+\subsection{Roots of unity}
+\begin{itemize}
+    \item If $z_1$ is one root of the equation $z^n=s$, and $1,\omega,\omega^2,\dots,\omega^{n-1}$ are the nth roots of unity, then the roots of $z^n=s$ are given by $z_1, z_1\omega, z_1\omega^2, \dots, z_1\omega^{n-1}$
+    \item For equation $z^n=1$: $\omega=e^{i\frac{\pi}{n}}$, $\omega^n=1$
+\end{itemize}
+
+
+\section{Trigonometric identities}
+\subsection{Properties for $z$}
+\begin{itemize}
+    \item $z=\cis\theta=e^{i\theta}=\cos\theta + i\sin\theta$, $\dfrac{1}{z} = e^{-i\theta} = \cis (-\theta)$
+    \item $z+\dfrac{1}{z}=2\cos\theta$
+    \item $\left(z+\dfrac{1}{z}\right)^n=\left(e^{i\theta}+e^{-i\theta}\right)^n=2^n\cos^n\theta$
+    \item $z-\dfrac{1}{z}=2i\sin\theta$
+    \item $\left(z-\dfrac{1}{z}\right)^n=\left(e^{i\theta}-e^{-i\theta}\right)^n=2^n i^n \sin^n\theta$
+    \item $z^n+\dfrac{1}{z^n}=2\cos (n\theta)$
+    \item $z^n-\dfrac{1}{z^n}=2i\sin (n\theta)$
+\end{itemize}
+\subsection{Finding $\sin (n\theta)$ or $\cos (n\theta)$}
+\begin{enumerate}
+    \item Use $\left(z+\dfrac{1}{z}\right)$ for $\cos$ and $\left(z+\dfrac{1}{z}\right)$ for $\sin$
+    \item Use the $n$th power of $z+\dfrac{1}{z}$ or $z-\dfrac{1}{z}$ ($n$ is the same as coefficient)
+    \item Binomial expansion
+    \item Merge the terms into $z^n+\dfrac{1}{z^n}$ or $z^n-\dfrac{1}{z^n}$
+    \item Use properties above to convert then into trig functions
+\end{enumerate}
+\subsection{Find $\sin^n\theta$}
+\textbf{$n$ is odd:}
+\begin{itemize}
+    \item $n=4k+1$: $\sin^n\theta=\dfrac{1}{2^{n-1}}\left[\binom{n}{0}\sin n\theta - \binom{n}{1}\sin (n-2)\theta + \binom{n}{2}\sin (n-4)\theta - \dots + \binom{n}{\frac{n-1}{2}}\sin \theta\right]$
+    \item $n=4k+3$: $\sin^n\theta=\dfrac{1}{2^{n-1}}\left[-\binom{n}{0}\sin n\theta + \binom{n}{1}\sin (n-2)\theta - \binom{n}{2}\sin (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\sin \theta\right]$
+\end{itemize}
+\textbf{$n$ is even:}
+\begin{itemize}
+    \item $n=4k$: $\sin^n\theta=\dfrac{1}{2^{n-1}}\left[\binom{n}{0}\cos n\theta - \binom{n}{1}\cos (n-2)\theta + \binom{n}{1}\cos (n-4)\theta - \dots + \binom{n}{\frac{n-1}{2}}\cos \theta\right]$
+    \item $n=4k+2$: $\sin^n\theta=\dfrac{1}{2^{n-1}}\left[-\binom{n}{0}\cos n\theta + \binom{n}{1}\cos (n-2)\theta - \binom{n}{1}\cos (n-4)\theta + \dots - \binom{n}{\frac{n-1}{2}}\cos \theta\right]$
+\end{itemize}
+\subsection{Find $\cos^n\theta$}
+\begin{itemize}
+    \item $\cos^n\theta = \dfrac{1}{2^{n-1}}\sum_{i=0}^{\ceil{\frac{n-1}{2}}} \binom{n}{i}\cos (n-2i)\theta$
+    \item $\int \cos^n\theta \: d\theta = \dfrac{1}{2^{n-1}} \sum_{i=0}^{\ceil{\frac{n-1}{2}}} \binom{n}{i} \dfrac{\sin (n-2i)\theta}{n-2i}$
+\end{itemize}
+
+\section{Sum of geometric series}
+For $w, z \in \mathbb{C}$:
+\begin{itemize}
+    \item $\sum\limits_{r=0}^{n-1}wz^r=\dfrac{w(z^n-1)}{z-1}$
+    \item $\sum\limits_{r=0}^{n-1}wz^r=\dfrac{w}{1-z}$, $|z|<1$
+\end{itemize}
+

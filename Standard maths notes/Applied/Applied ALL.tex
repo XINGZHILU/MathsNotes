@@ -52,31 +52,40 @@
 \usepackage[many]{tcolorbox}
 \usepackage{pifont}
 \usepackage{hyperref}
-\hypersetup{%
-	linktoc=all,%
-	bookmarksnumbered,%
-	bookmarksopen,%
-	hidelinks}
-\usepackage{bookmark}
-\bookmarksetup{
-	addtohook={%
-		\ifnum\bookmarkget{level}=0%
-		\bookmarksetup{color=red}%
-		\fi%
-		\ifnum\bookmarkget{level}=1%
-		\bookmarksetup{color=blue}%
-		\fi%
-		\ifnum\bookmarkget{level}=2%
-		\bookmarksetup{color=teal}%
-		\fi}}
+\usepackage{blindtext}
+\counterwithin*{chapter}{part}
+\newcommand*{\Part}[2][\partheading]{%
+  \refstepcounter{part}%
+  \def\partheading{#2}%
+  \part*{#2}%
+  \addcontentsline{toc}{part}{#1}%
+}
+
+% \hypersetup{%
+% 	linktoc=all,%
+% 	bookmarksnumbered,%
+% 	bookmarksopen,%
+% 	hidelinks}
+% \usepackage{bookmark}
+% \bookmarksetup{
+% 	addtohook={%
+% 		\ifnum\bookmarkget{level}=0%
+% 		\bookmarksetup{color=red}%
+% 		\fi%
+% 		\ifnum\bookmarkget{level}=1%
+% 		\bookmarksetup{color=blue}%
+% 		\fi%
+% 		\ifnum\bookmarkget{level}=2%
+% 		\bookmarksetup{color=teal}%
+% 		\fi}}
 % enumerate
-\usepackage[inline]{enumitem}
 \usepackage{multicol}
 \usepackage[inline]{enumitem}
 \usepackage{tasks}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{cancel}
+
 
 \renewcommand\rmdefault{ptm}
 \renewcommand\sfdefault{ptm}
@@ -149,31 +158,80 @@
 	}
 }
 
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+
 \begin{document}
-	\maketitle
-	
-	\tableofcontents
-	
-	\part{AS Statistics}
-	\input{chapters/stats_as.tex}
-	
-	\pagebreak		
+\maketitle
+\everymath{\displaystyle}
 
-	\part{AS Mechanics}
-	\input{chapters/mechanics_as.tex}
-	
-	\pagebreak		
-	
-	\setcounter{chapter}{0}
-	
-	\part{A2 Statistics}		
-	\input{chapters/stats_a2.tex}
-	
-	\pagebreak
-	
-	\part{A2 Mechanics}
-	\input{chapters/mechanics_a2.tex}
-	
+\tableofcontents
 
-	
+\part{AS Statistics}
+\chapter{Data collection}
+\input{chapters/AS/1.tex}
+
+\chapter{Measurements of location and spread}
+\input{chapters/AS/2.tex}
+
+\chapter{Representations of data}
+\input{chapters/AS/3.tex}
+
+\chapter{Correlation}
+\input{chapters/AS/4.tex}
+
+\chapter{Probability}
+\input{chapters/AS/5.tex}
+
+\chapter{Statistical distributions}
+\input{chapters/AS/6.tex}
+
+\chapter{Hypothesis testing}
+\input{chapters/AS/7.tex}
+
+\part{AS Mechanics}
+\setcounter{chapter}{7}
+\chapter{Modelling in mechanics}
+\input{chapters/AS/8.tex}
+
+\chapter{Constant acceleration}
+\input{chapters/AS/9.tex}
+
+\chapter{Forces and motion}
+\input{chapters/AS/10.tex}
+
+\chapter{Variable acceleration}
+\input{chapters/AS/11.tex}
+
+
+\part{A2 Statistics}
+\chapter{Regression, correlation and hypothesis testing}
+\input{chapters/A2/1.tex}
+
+\chapter{Conditional probability}
+\input{chapters/A2/2.tex}
+
+\chapter{The normal distribution}
+\input{chapters/A2/3.tex}
+
+\part{A2 Mechanics}
+\setcounter{chapter}{3}
+\chapter{Moments}
+\input{chapters/A2/4.tex}
+
+\chapter{Forces and friction}
+\input{chapters/A2/5.tex}
+
+\chapter{Projectiles}
+\input{chapters/A2/6.tex}
+
+\chapter{Applications of forces}
+\input{chapters/A2/7.tex}
+
+\chapter{Further kinematics}
+\input{chapters/A2/8.tex}
+
+
+
 \end{document}

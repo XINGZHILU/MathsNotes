@@ -1,0 +1,46 @@
+\section{Definition}
+$\int_{a}^{b} f(x) \: dx = \lim\limits_{\delta x\rightarrow0}\sum_{x=a}^{b}f(x)\delta x$
+
+\section{Formulae}
+Formula sheet:\\\\
+\begin{tabular}{ll}
+    $\textbf{f(x)}$ & \textbf{$\int f(x) \: dx$ ($+c$)}                                                                  \\&\\
+    $\sec^2kx$      & $\dfrac{1}{k} \tan kx$                                                                             \\&\\
+    $\tan kx$       & $\dfrac{1}{k} \ln |\sec kx|$                                                                       \\&\\
+    $\cot kx$       & $\dfrac{1}{k} \ln |\sin kx|$                                                                       \\&\\
+    $\cosec kx$     & $-\dfrac{1}{k} \ln |\cosec kx + \cot kx|$, $\dfrac{1}{k} \ln \left|\tan (\dfrac{1}{2}kx)\right|$              \\&\\
+    $\sec kx$       & $\dfrac{1}{k} \ln |\sec kx + \tan kx|$, $\dfrac{1}{k} \ln \left|\tan (\dfrac{1}{2}kx+\dfrac{1}{4}\pi)\right|$ \\
+\end{tabular}\\
+Integrating $\sin^2x$ or $\cos^2x$ (power descending):
+\begin{itemize}
+    \item $\int \sin ^2 x \: dx=\int \dfrac{1-\cos 2x}{2} \: dx=\dfrac{1}{2}\left(x-\dfrac{\sin 2x}{2}\right)+c$
+    \item $\int \cos ^2 x \: dx=\int \dfrac{1+\cos 2x}{2} \: dx= \dfrac{1}{2}\left(x+\dfrac{\sin 2x}{2}\right)+c$
+\end{itemize}
+By part:
+\begin{itemize}
+    \item $\int \ln x \: dx = x\ln x + x + c$
+\end{itemize}
+\section{Techniques}
+\subsection{U-sub}
+\begin{itemize}
+    \item $\int f'(ax+b) \: dx = \dfrac{f(ax+b)}{a}+c$
+          \begin{description}
+              \item[Substitution:] $u=ax+b$
+          \end{description}
+    \item $\int \dfrac{f'(x)}{f(x)} \: dx = \ln |f(x)|+c$
+          \begin{description}
+              \item[Substitution:] $u=f(x)$
+          \end{description}
+\end{itemize}
+\subsection{By part}
+\begin{itemize}
+    \item $\int u \: dv = uv - \int v \: du$
+    \item LIPET rule: leftmost = $u$
+          \begin{description}
+              \item[L:] logarithmic
+              \item[I:] inverse trigonometry
+              \item[P:] polynomial
+              \item[E:] exponential
+              \item[T:] trigonometry
+          \end{description}
+\end{itemize}
