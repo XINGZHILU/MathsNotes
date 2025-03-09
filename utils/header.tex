@@ -1,11 +1,10 @@
-\documentclass[oneside,fleqn,11pt]{book}
-\usepackage[a4paper, total={7.2in, 10.3in}]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
 \DeclareMathOperator\dx{\mathrm{d}\mathit{x}}
 \DeclareMathOperator\dy{\mathrm{d}\mathit{y}}
 \DeclareMathOperator\dt{\mathrm{d}\mathit{t}}
@@ -226,98 +225,3 @@
 		at (title.north east) {#1};
 	}
 }
-
-\makeatletter
-\g@addto@macro\bfseries{\boldmath}
-\makeatother
-
-\title{A Level Further Mathematics Notes}
-\author{Xingzhi Lu}
-\date{}
-
-\begin{document}
-\everymath{\displaystyle}
-\maketitle
-\tableofcontents
-\pagebreak
-\part{Core Pure 1}
-\chapter{Complex numbers}
-\input{chapters/cp1/1.tex}
-\chapter{Argand diagrams}
-\input{chapters/cp1/2.tex}
-\chapter{Series}
-\input{chapters/cp1/3.tex}
-\chapter{Roots of polynomials}
-\input{chapters/cp1/4.tex}
-\chapter{Volumes of revolution}
-\input{chapters/cp1/5.tex}
-\chapter{Matrices}
-\input{chapters/cp1/6.tex}
-\chapter{Linear transformations}
-\input{chapters/cp1/7.tex}
-\chapter{Proof by induction}
-\input{chapters/cp1/8.tex}
-\chapter{Vectors}
-\input{chapters/cp1/9.tex}
-
-\setcounter{chapter}{0}
-
-\part{Core Pure 2}
-\chapter{Complex numbers}
-\input{chapters/cp2/1.tex}
-\chapter{Series}
-\input{chapters/cp2/2.tex}
-\chapter{Methods in calculus}
-\input{chapters/cp2/3.tex}
-\chapter{Volumes of revolution}
-\input{chapters/cp2/4.tex}
-\chapter{Polar coordinates}
-\input{chapters/cp2/5.tex}
-\chapter{Hyperbolic functions}
-\input{chapters/cp2/6.tex}
-\chapter{Methods in differential equations}
-\input{chapters/cp2/7.tex}
-\chapter{Modelling in differential equations}
-\input{chapters/cp2/8.tex}
-
-\setcounter{chapter}{0}
-\part{Further Pure 1}
-\chapter{Further vectors}
-\input{chapters/fp1/1.tex}
-\chapter{Conic sections 1}
-\input{chapters/fp1/2.tex}
-\chapter{Conic sections 2}
-\input{chapters/fp1/3.tex}
-\chapter{Inequalities}
-\input{chapters/fp1/4.tex}
-\chapter{The $t$-formulae}
-\input{chapters/fp1/5.tex}
-\chapter{Taylor series}
-\input{chapters/fp1/6.tex}
-\chapter{Methods in calculus}
-\input{chapters/fp1/7.tex}
-\chapter{Numerical methods}
-\input{chapters/fp1/8.tex}
-\chapter{Redicible differential equations}
-\input{chapters/fp1/9.tex}
-
-\setcounter{chapter}{0}
-\part{Further Mechanics 1}
-\chapter{Momentum and impulse}
-\input{chapters/fm1/1.tex}
-
-\chapter{Work, energy and power}
-\input{chapters/fm1/2.tex}
-
-\chapter{Elastic strings and springs and elastic energy}
-\input{chapters/fm1/3.tex}
-
-\chapter{Elastic collisions in one dimension}
-\input{chapters/fm1/4.tex}
-
-\chapter{Elastic collisions in two dimensions}
-\input{chapters/fm1/5.tex}
-
-
-
-\end{document}
