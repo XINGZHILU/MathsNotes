@@ -1,5 +1,17 @@
 \section{Types of differential equations}
 
+\subsection{Order}
+\begin{description}
+    \item[First order] $\dv{y}{x}$
+    \item[Second order] $\dv[2]{y}{x}$
+    \item[$n$th order] $\dv[n]{y}{x}$
+\end{description}
+
+\subsection{Homogeneous / non-homogeneous}
+\begin{description}
+    \item[Homogeneous differential equations] 
+    \item[Non-homogeneous differential equations] 
+\end{description}
 
 \section{First order differential equations}
 \subsection{Separation}
@@ -9,14 +21,14 @@
 \end{itemize}
 
 \subsection{The integrating factor}
-A first order differential equation of the form $\frac{\dy}{\dx}+P(x)y = Q(x)$ can be solved by multiplying every term by the integrating factor $I=e^{\int P(x)dx}$
+A first order differential equation of the form $\dv{y}{x}+P(x)y = Q(x)$ can be solved by multiplying every term by the integrating factor $I=e^{\int P(x)dx}$
 \begin{example}
-    Find the general solution of the differential equation $$\frac{\dy}{\dx}-4y=e^x$$
+    Find the general solution of the differential equation $$\dv{y}{x}-4y=e^x$$
 \end{example}
 \begin{solution}
     The integrating factor is $e^{\int (-4) dx}=e^{-4x}$
     \begin{flalign*}
-        e^{-4x}\frac{\dy}{\dx}-4e^{-4x}y & =e^xe^{-4x}                   \\
+        e^{-4x}\dv{y}{x}-4e^{-4x}y & =e^xe^{-4x}                   \\
         \frac{\mathrm{d}}{\dx}(e^{-4x}y)         & =e^{-3x}                      \\
         e^{-4x}y                        & = \int e^{-4x} \: dx          \\
         \nonumber                       & = -\frac{1}{3}e^{-3x} + c     \\
