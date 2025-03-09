@@ -1,0 +1,33 @@
+\section{Proof by contradiction}
+\subsection{Steps}
+\begin{enumerate}
+    \item Assume that the first statement is false
+    \item Use logical steps / contradiction from knowledge to show that the assumption is false
+    \item Conclude that the assumption is false so the original statement must be true
+\end{enumerate}
+\subsection{Irrationality of $\sqrt{2}$}
+\begin{description}
+    \item [Assumption:] $\sqrt{2}$ is a rational number
+    \item Then $\sqrt{2} = \frac{a}{b}$ for some integers $a$ and $b$
+    \item Also assume that $a$ and $b$ has no common factors so the fraction is in the simplest form
+    \item So $2=\frac{a^2}{b^2}$, $a^2=2b^2$
+    \item So $a^2$ must be even, so a is also even
+    \item If $a$ is even, then it can be expressed in the form $a=2n$, where $n$ is an integer
+    \item Substitute $a=2n$: $(2n)^2=2b^2$
+    \item So $4n^2 = 2b^2$
+    \item So $b^2=2n^2$, hence $b^2$ must be even and b is also even
+    \item If $a$ and $b$ are both even, they will have a common factor or 2
+    \item This contradicts that $a$ and $b$ has no common factors, so $\sqrt{2}$ is an irrational number
+\end{description}
+
+
+\subsection{Infinity of primes}
+\begin{description}
+    \item [Assumption:] there is a finite number of prime numbers
+    \item List all the prime numbers that exist: $p_1, p_2, p_3, \dots, p_n$
+    \item Consider the number $N = p_1 \times p_2 \times p_3 \times \dots \times p_n + 1$
+    \item When $N$ is divided by any of $p_1, p_2, p_3, \dots, p_n$ a remainder of $1$ is produced so none of them is a factor of $N$
+    \item Therefore $N$ must be prime or have a prime factor not in the list of all the prime numbers that exist
+    \item This contradicts the assumption that there is a finite number of prime numbers
+    \item Therefore there must be an infinite number of prime numbers
+\end{description}

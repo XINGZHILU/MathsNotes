@@ -1,0 +1,71 @@
+\section{Basic calculations}
+\subsection{Addition / subtraction}
+$(\mathbf {A}+\mathbf {B})_{i,j}=\mathbf {A}_{i,j}+{\mathbf {B}}_{i,j},\quad 1\leq i\leq m,\quad 1\leq j\leq n$\\
+$(\mathbf {A}-\mathbf {B})_{i,j}=\mathbf {A}_{i,j}-{\mathbf {B}}_{i,j},\quad 1\leq i\leq m,\quad 1\leq j\leq n$
+\subsection{Scalar multiplication}
+$(c\mathbf{A})_{i,j}=c\cdot A_{i,j}$
+\subsection{Matrix multiplication}
+\includegraphics[width=0.35\textwidth]{MatrixMultiplication}
+
+\subsection{Transposition}
+$(\mathbf{A}^\mathrm{T})_{i,j}=A_{j,i}$
+
+\section{Special matrices}
+\begin{description}
+    \item[Square matrix:] The number of rows and columns are the same
+    \item[Zero matrix:] All of the elements are zero
+    \item[Identity matrix:] A square matrix in which all the elements on the leading diagonal are 1 and the remaining elements are 0, denoted by $\mathbf{I}_k$ for $k\times k$ identity matrix
+\end{description}
+
+
+\section{Determinants}
+
+\subsection{$2\times2$ matrices}
+$\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc$
+
+\subsection{$3\times3$ matrices}
+
+$\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}=a\begin{vmatrix}e&f\\h&i\end{vmatrix}-b\begin{vmatrix}d&f\\g&i\end{vmatrix}+c\begin{vmatrix}d&e\\g&h\end{vmatrix}=aei+bfg+cdh-ceg-bdi-afh$
+
+\subsection{Singular matrices}
+\begin{itemize}
+    \item Singular matrices are square matrices with a determinant of 0
+    \item It does not have an inverse
+    \item If $\mathbf{A}$ and $\mathbf{B}$ are non-singular matrices, then $(\mathbf{AB})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1}$
+\end{itemize}
+
+
+
+\subsection{Properties of determinants}
+\begin{itemize}
+    \item $\det(\mathbf{AB})=\det(\mathbf{A})\det(\mathbf{B})=\det(\mathbf{B})\det(\mathbf{A})=\det(\mathbf{BA})$
+    \item $\det(k\mathbf{A})=k^n\det(\mathbf{A})$ ($\mathbf{A}$ is a $n\times n$ matrix)
+\end{itemize}
+
+
+\section{Inverse matrices}
+\subsection{$2\times2$ matrices}
+$\begin{bmatrix}
+        a & b \\c & d
+    \end{bmatrix}^{-1}=\frac{1}{ad-bc}\begin{bmatrix}
+        d & -b \\-c & a
+    \end{bmatrix}$
+
+\subsection{$3\times3$ matrices}
+$\mathbf {A} ^{-1}={\begin{bmatrix}a&b&c\\d&e&f\\g&h&i\\\end{bmatrix}}^{-1}={\frac {1}{\det(\mathbf {A} )}}{\begin{bmatrix}\,A&\,B&\,C\\\,D&\,E&\,F\\\,G&\,H&\,I\\\end{bmatrix}}^{\mathrm {T} }={\frac {1}{\det(\mathbf {A} )}}{\begin{bmatrix}\,A&\,D&\,G\\\,B&\,E&\,H\\\,C&\,F&\,I\\\end{bmatrix}}$\\
+$\begin{alignedat}{6}A&={}&(ei-fh),&\quad &D&={}&-(bi-ch),&\quad &G&={}&(bf-ce),\\B&={}&-(di-fg),&\quad &E&={}&(ai-cg),&\quad &H&={}&-(af-cd),\\C&={}&(dh-eg),&\quad &F&={}&-(ah-bg),&\quad &I&={}&(ae-bd).\\\end{alignedat}$
+
+\subsection{Solving equations with matrices}
+If $\mathbf{A}\begin{pmatrix}
+        x \\y\\z
+    \end{pmatrix}=\mathbf{v}$ then $\begin{pmatrix}
+        x \\y\\z
+    \end{pmatrix}=\mathbf{A}^{-1}\mathbf{v}$
+\begin{description}
+    \item[Consistent system of linear equations:] there is at least one set of values that satisfies all the equations simultaneously
+    \item[Inconsistent:] such set of values does not exist
+\end{description}
+
+\subsection{Possible outcomes of solutions}
+\includegraphics[width=0.75\textwidth]{equations}\\
+\includegraphics[width=0.5\textwidth]{equations2}

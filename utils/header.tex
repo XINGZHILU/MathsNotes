@@ -12,6 +12,7 @@
 \DeclareMathOperator\cis{cis}
 \DeclareMathOperator\sech{sech}
 \DeclareMathOperator\csch{csch}
+\DeclareMathOperator\cosec{cosec}
 \DeclareMathOperator\arsinh{arsinh}
 \DeclareMathOperator\arcosh{arcosh}
 \DeclareMathOperator\artanh{artanh}
@@ -21,6 +22,9 @@
 \DeclareMathOperator\Rset{\mathbb{R}}
 \DeclareMathOperator\Iset{\mathbb{I}}
 \DeclareMathOperator\Cset{\mathbb{C}}
+\DeclareMathOperator\UQ{Q_3}
+\DeclareMathOperator\LQ{Q_1}
+\DeclareMathOperator\Med{Q_2}
 
 \usepackage{pgfplots}
 \graphicspath{ {./images/} }
@@ -225,3 +229,7 @@
 		at (title.north east) {#1};
 	}
 }
+
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
