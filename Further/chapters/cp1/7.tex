@@ -1,0 +1,95 @@
+\section{Linear transformations in 2D}
+\subsection{Properties}
+If $L(\vec{v})$ is linear:
+\begin{enumerate}
+    \item $L(\vec{v})$ should always map the origin onto itself
+    \item $L(\vec{v})$ can be represented by a matrix
+    \item $L(\vec{v_1}+\vec{v_2})=L(\vec{v_1})+L(\vec{v_2})$ (closure in addition)
+    \item $L(\lambda\vec{v_1})=\lambda L(\vec{v_1})$ (closure in scalar multiplication)
+\end{enumerate}
+\subsection{Invariant points and lines}
+\begin{description}
+    \item[Invariant points:] Points which are mapped onto themselves under the given transformation
+    \item[Invariant lines:] Lines which map onto themselves
+\end{description}
+
+\subsection{Reflection}
+\begin{description}
+    \item[Reflection in $y$-axis:] $\begin{pmatrix}
+                  -1 & 0 \\0&1
+              \end{pmatrix}$, invariant points: points on the $y$-axis; invariant lines: $x=0$, $y=k$
+    \item[Reflection in $x$-axis:] $\begin{pmatrix}
+                  1 & 0 \\0&-1
+              \end{pmatrix}$, invariant points: points on the $x$-axis; invariant lines: $y=0$, $x=k$
+    \item[Reflection in line $y=x$:] $\begin{pmatrix}
+                  0 & 1 \\1&0
+              \end{pmatrix}$, invariant points: points on $y=x$; invariant lines: $y=x$, $y=-x+k$
+    \item[Reflection in line $y=-x$:] $\begin{pmatrix}
+                  0 & -1 \\-1&0
+              \end{pmatrix}$, invariant points: points on $y=-x$; invariant lines: $y=-x$, $y=x+k$
+\end{description}
+
+\subsection{Rotation}
+\begin{description}
+    \item[Rotation through angle $\theta$ anticlockwise about the origin] $\begin{pmatrix}
+                  \cos\theta & -\sin\theta \\\sin\theta&\cos\theta
+              \end{pmatrix}$
+    \item[Invariant points:] Only $(0,0)$
+    \item[Invariant lines:] When $\theta=180\textdegree$ any line passing through the origin is an invariant line, otherwise no invariant lines
+\end{description}
+
+\subsection{Enlargement / stretches}
+\begin{description}
+    \item[Transformation matrix] $\begin{pmatrix}
+                  a & 0 \\ 0 & b
+              \end{pmatrix}$ = a stretch of scale factor $a$ parallel to the $x$-axis and scale factor $b$ parallel to the $y$-axis
+    \item[Invariant lines] $x$- and $y$-axes for all stretches
+          \begin{itemize}
+              \item Stretch parallel to the $x$-axes: any line parallel to the $x$-axes
+              \item Stretch parallel to the $y$-axes: any line parallel to the $y$-axes
+          \end{itemize}
+    \item[Invariant points] The origin is always an invariant point
+          \begin{itemize}
+              \item Stretch parallel to the $x$-axes: points on the $y$-axes
+              \item Stretch parallel to the $y$-axes: points on the $x$-axes
+          \end{itemize}
+    \item[Change in area] $\det(\mathbf{M}) = \text{area scale factor}$
+\end{description}
+
+\section{Linear transformations in 3D}
+\begin{description}
+    \item[Reflection in plane $x=0$] $\begin{pmatrix}
+                  -1 & 0 & 0 \\
+                  0  & 1 & 0 \\
+                  0  & 0 & 1
+              \end{pmatrix}$
+    \item[Reflection in plane $y=0$] $\begin{pmatrix}
+                  1 & 0  & 0 \\
+                  0 & -1 & 0 \\
+                  0 & 0  & 1
+              \end{pmatrix}$
+    \item[Reflection in plane $z=0$] $\begin{pmatrix}
+                  1 & 0 & 0  \\
+                  0 & 1 & 0  \\
+                  0 & 0 & -1
+              \end{pmatrix}$
+    \item[Rotation angle $\theta$ anticlockwise about the $x$-axis] $\begin{pmatrix}
+                  1 & 0          & 0           \\
+                  0 & \cos\theta & -\sin\theta \\
+                  0 & \sin\theta & \cos\theta
+              \end{pmatrix}$
+    \item[Rotation angle $\theta$ anticlockwise about the $y$-axis] $\begin{pmatrix}
+                  \cos\theta  & 0 & \sin\theta \\
+                  0           & 1 & 0          \\
+                  -\sin\theta & 0 & \cos\theta
+              \end{pmatrix}$
+    \item[Rotation angle $\theta$ anticlockwise about the $z$-axis] $\begin{pmatrix}
+                  \cos\theta & -\sin\theta & 0 \\
+                  \sin\theta & \cos\theta  & 0 \\
+                  0          & 0           & 1
+              \end{pmatrix}$
+\end{description}
+
+
+
+

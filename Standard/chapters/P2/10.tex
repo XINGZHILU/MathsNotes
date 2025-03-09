@@ -1,0 +1,27 @@
+\section{Locating roots}
+\subsection{Method}
+If a function $f(x)$ is continuous on the interval $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then $f(x)$ has at least one root, $x$, which satisfies $a<x<b$
+\subsection{How change of sign can fail}
+\begin{itemize}
+    \item When the interval is too large sign may not change as there may be an even number of roots
+    \item If the function is not continuous, sign may change but there may be an asymptote e.g. reciprocal
+\end{itemize}
+
+\section{Iteration}
+\begin{itemize}
+    \item Iterative formula can be found by rewriting $f(x)=0$ into $x=g(x)$, then $x_{n+1}=g(x_n)$
+    \item Find the value of $x_1$, $x_2$, $x_3$, etc.
+    \item If converge (get closer to the root from the same direction / alternate above and below the root) then solution can be found
+    \item Test for roots using the change of sign of function $h(x)=g(x)-x$
+\end{itemize}
+
+\section{The Newton-Raphson method}
+\begin{itemize}
+    \item $x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}$
+    \item Find approximation to $x$ decimal places
+    \item Show accurate to $x$ decimal places: use change in sign to show
+    \item[$\star$] If any value of $x_i$ is at a turning point then the method will fail as $f'(x)=0$ which results in division by zero
+\end{itemize}
+
+\section{The trapezium rule}
+$\int_{a}^{b}y\:dx \approx \dfrac{1}{2} h (y_0+2(y_1+y_2+\dots+y_{n-1})+y_n)$ where $h=\dfrac{b-a}{n}$ and $y_i=f(a+ih)$
