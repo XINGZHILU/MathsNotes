@@ -5,6 +5,26 @@
     \item[Mode / modal class] The value or class that occurs most often
 \end{description}
 
+\section{Quartiles and percentiles}
+\subsection{Finding medians}
+\begin{description}
+    \item[Ungrouped / know all individual values] $\left(\frac{n+1}{2}\right)$th value
+    \item[Categorical] $\frac{n}{2}$th value
+\end{description}
+
+\subsection{Quartiles}
+\begin{itemize}
+    \item Calculate $k=\frac{n}{4}$($Q_1$) or $k=\frac{3n}{4}$($Q_3$)
+    \item If it is an integer then the answer is $\frac{\text{$k$th value} + \text{$(k+1)$th value}}{2}$
+    \item Otherwise take the $\left\lceil k \right\rceil$th value
+\end{itemize}
+
+\subsection{Percentiles}
+\begin{itemize}
+    \item No rounding needed, use linear interpolation straightaway
+\end{itemize}
+
+
 \section{Types of data}
 \begin{description}
     \item[Quantitative data] Associated with numerical observations
@@ -23,7 +43,7 @@
 \section{Grouped data}
 \subsection{Assumptions for estimating mean and standard deviation}
 \begin{itemize}
-    \item Values are evenly distributed within the classes
+    \item Values are \textbf{evenly distributed} within the classes
 \end{itemize}
 
 \section{Interpreting distributions}

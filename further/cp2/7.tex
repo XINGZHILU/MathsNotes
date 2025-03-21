@@ -36,14 +36,20 @@ A first order differential equation of the form $\dv{y}{x}+P(x)y = Q(x)$ can be 
     \end{flalign*}
 \end{solution}
 
-\subsection{$v$-substitution}
-\begin{itemize}
-    \item Use $y=vx$, $y=x+v$, etc.
-    \item Solve the equation in terms of $v$ and $x$
-    \item Change $v$ back into $y$
-\end{itemize}
+\subsection{$u$-substitution}
+$$\dv{y}{x} + P(x)y = Q(x)y^n$$
+\begin{enumerate}
+    \item Divide by $y^n$
+    \item $u$-sub: $u=y^{1-n}$
+    \item Change into first order linear differential differential equation
+\end{enumerate}
 
 \section{Second order homogeneous differential equations}
-
+$$a\dv[2]{y}{x} + b\dv{y}{x} + cy = 0$$
+\begin{enumerate}
+    \item Use $u$-sub: $u=\ln x$, $x=e^u$
+    \item Convert into $\dv[2]{y}{u} = f(y)$
+\end{enumerate}
 
 \section{Second order non-homogeneous differential equations}
+
